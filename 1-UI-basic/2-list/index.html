@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Lists</title>
+</head>
+
+<body>
+    <center>
+        <h1>HTML Lists</h1>
+    </center>
+    <!-- Ordered List -->
+    <ol type="a">
+        <!-- should always contain <li> -->
+        <!-- List items -->
+        <li>Batman</li>
+        <li>Superman</li>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li></li>
+        <li>anything</li>
+        <!-- inside <li> we can put any tag -->
+        <li><a href="#">Link</a></li>
+        <li><strong>Strong text</strong></li>
+        <li>
+            <ol>
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+                <li>
+                    <ol>
+                        <li>A</li>
+                        <li>B</li>
+                        <li>C</li>
+                    </ol>
+                </li>
+            </ol>
+        </li>
+    </ol>
+
+    <!-- Unordered List -->
+    <h4>Example</h4>
+    <ul>
+        <!-- Should contains <li> -->
+        <li>Hamburg</li>
+        <li>Germany</li>
+        <li>Robot</li>
+        <li>Laptop</li>
+        <li>DCI</li>
+        <li></li>
+        <li>
+            <ul>
+                <li>A</li>
+                <li>B</li>
+                <li>C</li>
+                <li>
+                    <ul>
+                        <li>A</li>
+                        <li>B</li>
+                        <li>C</li>
+                        <li>
+                            <ul>
+                                <li>A</li>
+                                <li>B</li>
+                                <li>C</li>
+                                <li></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <!-- Description Lists -->
+    <dl>
+        <!-- Discription Item -->
+        <dt>HTML:</dt><!-- Define a term -->
+        <dd>For web Browsers</dd><!-- Define a term Description -->
+        <dt>Css:</dt>
+        <dd>To control HTML Tags</dd>
+        <dd>To control Font Color</dd>
+    </dl>
+
+</body>
+
+</html>
