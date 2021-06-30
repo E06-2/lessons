@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template with Table</title>
+    <style>
+        body{
+            padding: 0px;
+            margin: 0px;
+        }
+        table{
+            width: 100%;
+            height: 700px;
+        }
+        td[colspan]{
+            background-color: aqua;
+        }
+        /* Left Side Bar */
+        tr:nth-child(2)>td:nth-child(1){
+            background-color: blue;
+            width: 25%;
+            padding: 2%;
+        }
+        /* Right Side Bar */
+        tr:nth-child(2)>td:nth-child(3){
+            background-color: rgb(141, 141, 161);
+            width: 25%;
+            padding: 2%;
+        }
+        /* Main Content */
+        tr:nth-child(2)>td:nth-child(2){
+            background-color: rgb(221, 221, 223);
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <!-- Header Section -->
+        <tr>
+            <td colspan="3">
+                <center><h1>Header</h1></center>
+            </td>
+        </tr>
+        <!-- Right Side bar, Main Content, Left Side bar section -->
+        <tr>
+            <!-- Right Side Bar -->
+            <td>
+                <h2>Left Side Bar</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Doloremque excepturi velit placeat possimus corrupti nobis explicabo adipisci et sed? Minima rerum, autem laudantium possimus optio alias neque quod quisquam unde.</p>
+            </td>
+            <!-- Main Content -->
+            <td>
+                <h2>Main Content</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quas voluptatibus veritatis laborum deserunt, sequi illum aut atque! Magni a consequatur debitis? Culpa, ut ipsam. Voluptatibus rerum illum dolorum ad.</p>
+            </td>
+            <!-- Left Side Bar -->
+            <td>
+                <h2>Right Side Bar</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita repudiandae sit natus cum odit dicta? Velit ea, voluptates voluptas vero nihil, sint nam, id consequuntur dolorum obcaecati delectus repudiandae dolorem?</p>
+            </td>
+        </tr>
+        <!-- Footer Section -->
+        <tr>
+            <td colspan="3">
+                <center><h2>Footer Section</h2></center>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
