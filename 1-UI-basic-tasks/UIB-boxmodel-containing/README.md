@@ -7,5 +7,5 @@
 ![header-mock](/images/header.png)
 * Give the `main` element a class of `container`. 
 * Select the `container` class. Give it a width of 80% and center it in the middle of the page.
-![main-mock](/1-UI-basic-tasks/images/main.png)
+![main-mock](/lessons/1-UI-basic-tasks/images/main.png)
 
