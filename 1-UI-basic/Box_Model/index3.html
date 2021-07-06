@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+        /* select by id use "#" and id */
+        #father{
+            width: 50%;
+            height: 150px;
+            background-color: antiquewhite;
+            border:5px solid blue;
+            outline:5px solid red ;
+            /*padding is the space between content and the border */
+            padding: 33px;
+            /* margin is the space between outline and other boxes */
+            margin: 10px;
+            outline-offset: 5px ;
+        }
+
+        #kid{
+
+        }
+        .another{
+            width: 50%;
+            height: 150px;
+            border: 5px solid brown;
+            border-top: 10px solid;
+            outline: 5px solid orange;
+            outline-offset: 5px ;
+            background-color: blue;
+            /*padding*/
+            /* padding-right: 8px;
+            padding-left: 4px;/* to control the left padding only*/
+            padding-top: 2px;/* to control the top padding only*/
+            padding-bottom: 10px;/* to control the bottom padding only*/
+
+            padding: 15px;/*to make padding for each side 15ps*/
+            /*padding top right bottom left*/
+            padding: 2px 4px 6px 8px; 
+            /*padding top-bottom left-right*/
+            padding: 4px 8px;
+            /*margin*/
+            /* margin: 20px;20px each side */
+            /* margin-left: 20px;
+            margin-top: 20px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            margin: 2px 4px 6px 8px; */
+            /* margin: 4px 8px; */
+            
+            margin: auto;/*keep margin left & right same (center Element)*/
+        }
+    </style>
+</head>
+<body>
+    <div id="father">
+        <!-- Box consist of:
+            1- content
+            2- border
+            3- outline
+        -->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus qui, nemo quasi sint, saepe quaerat esse culpa quis aliquid itaque reiciendis obcaecati excepturi nobis quia natus delectus aperiam. Nam, ab.</p>
+        <!-- content could be text or another HTML element -->
+        <div id="kid"></div>
+    </div>
+    <div class="another">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex rerum nisi veritatis reiciendis hic aspernatur aut commodi minus quod corporis consequuntur delectus sint ad ipsam nostrum, repudiandae tenetur sequi ratione.</p>
+    </div>
+    
+</body>
+</html>
