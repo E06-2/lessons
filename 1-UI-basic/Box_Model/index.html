@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box</title>
+    <style>
+        /* Which element? */
+        /* use selector */
+        /* All h1 tags */
+        h1{
+            color: cornflowerblue;
+            background-color: brown;
+        }
+        div{
+            width: 50%;
+            height: 100px;
+            background-color: gray
+        }
+        /* target element by class name */
+        .parent{
+            /* vw is viewpoint width */
+            width: 50vw;
+            height: 200px;
+        }
+        .child{
+            /* % related to the width of where this is element exist */
+            width: 50%;
+            /* vh is view point height (percent%) */
+            /* viewpoint is what we see in browser */
+            height: 50vh ;
+            background-color: rgba(180, 93, 93, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <!-- Everything is Box -->
+    <!-- all HTML Elements have a width & Hight -->
+    <h1 style="color: darkgreen;">Box Model</h1>
+    <div style="width: 25%;
+    
+    ">something</div>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Praesentium repellat, perspiciatis, aut maiores, ab iste veniam accusamus repellendus excepturi atque ducimus vero nemo esse mollitia! Error eaque quisquam quaerat? Alias?</p>
+    <br>
+    <hr>
+    here
+    <ul>
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+    </ul>
+    <div class="parent">
+        <div style="background-color: blueviolet;
+        height: 50px;"></div>
+    </div>
+    <!-- classes can be added to any HTML element -->
+<h1 class="parent">another h1 Tag</h1>
+
+
+<div class="parent">
+    <div class="child"></div>
+</div>
+</body>
+</html>
