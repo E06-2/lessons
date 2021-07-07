@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+    <style>
+        h1{
+            margin: auto;
+            width: 50%;
+        }
+        .auto{
+            width: 300px;
+            height: 300px;
+            border:1px solid;
+            /* set scrollbar x & y if only the content size is more than the element */
+            overflow: auto;
+        }
+        .box{
+            width: 600px;
+            height: 600px;
+            background-color: rgb(22, 92, 92);
+        }
+        .b1{
+            width: 300px;
+            height: 300px;
+            background-color: brown;
+            float: left;
+        }
+        .b2{
+            width: 300px;
+            height: 300px;
+            background-color: rgb(29, 27, 143);
+            float: left;
+        }
+        .b3{
+            width: 300px;
+            height: 300px;
+            background-color: rgb(27, 130, 143);
+            float: left;
+        }
+        .b4{
+            width: 300px;
+            height: 300px;
+            background-color: rgb(54, 143, 27);
+            float: left;
+        }
+        .hidden{
+            width: 300px;
+            height: 300px;
+            border: 1px solid;
+            /* to not display the rest of the content which is outside the border of the element */
+            overflow: hidden;
+        }
+        .visible{
+            width: 300px;
+            height: 300px;
+            border: 1px solid;
+            overflow: visible;/*by default*/
+        }
+        .of_x{
+            width: 300px;
+            height: 300px;
+            border: 1px solid;
+            /* show onlye y scrollbar */
+            overflow-x: hidden;
+        }
+        .of_y{
+            width: 300px;
+            height: 300px;
+            border: 1px solid;
+            /* show onlye x scrollbar */
+            overflow-y: hidden;
+        }
+        .scroll{
+            width: 300px;
+            height: 300px;
+            border: 1px solid;
+            /* it will show always the x, y scrollers */
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+    <h1>Overflow</h1>
+    <h2>Overflow auto</h2>
+    <div class="auto">
+        <strong>EX: Text</strong><br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas aperiam error, laborum officiis nam excepturi pariatur magni ducimus quibusdam rem ut iste mollitia velit eius aut autem animi dolore blanditiis?Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus doloribus deleniti illum laudantium officiis eos incidunt cupiditate totam facere nemo distinctio amet autem ipsa recusandae, eaque atque praesentium quas ab?
+    </div>
+    <div class="auto">
+        <div class="box"><strong>EX: HTML Element</strong><br></div>
+    </div>
+    <hr>
+    <h2>Overflow Hidden</h2>
+    <div class="hidden">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum dolore, reiciendis corrupti vero possimus iste, voluptates nesciunt, neque accusamus et dicta veniam? Vero non rerum exercitationem veritatis officia provident quidem?Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi quidem, vitae in obcaecati voluptate placeat eaque quasi aut ad ab cupiditate maxime exercitationem, incidunt impedit nam ex natus dignissimos. Iusto.
+    </div>
+    <hr>
+    <h2>Overflow Visible</h2>
+    <div class="visible">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum cumque, laudantium accusamus nihil minus delectus quam ea tempore iusto corrupti voluptatum cum sit architecto unde ipsum molestias enim aliquid a. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, eligendi dolorum nam accusantium alias cumque earum laborum quas consectetur eaque architecto nisi sint aliquam corporis voluptate, temporibus facere iure nihil!</div>
+    <br><br><br><br><br><br><br>
+    <hr>
+    <h2>Overflow_X</h2>
+    <div class="of_x">
+        <div class="box">
+            <div class="b1"></div>
+            <div class="b2"></div>
+            <div class="b3"></div>
+            <div class="b4"></div>
+        </div>
+    </div>
+<hr>
+<h2>Overflow_Y</h2>
+<div class="of_y">
+    <div class="box">
+        <div class="b1"></div>
+        <div class="b2"></div>
+        <div class="b3"></div>
+        <div class="b4"></div>
+    </div>
+</div>
+<hr>
+<h2>Overflow Scroll</h2>
+<div class="scroll">
+    <div class="box">
+        <div class="b1"></div>
+        <div class="b2"></div>
+        <div class="b3"></div>
+        <div class="b4"></div>
+    </div>
+</div>
+
+    <br><br><br><br><br><br><br>
+</body>
+</html>
