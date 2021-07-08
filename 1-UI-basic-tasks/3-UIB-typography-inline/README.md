@@ -12,4 +12,4 @@
 **Bonus**
 * Add another inline element to the document of your choice. 
 
-![alt-text](/image/reference.png "Reference Image")
+![alt-text](./image/reference.png "Reference Image")
