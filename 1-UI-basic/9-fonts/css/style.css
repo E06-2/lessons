@@ -11,13 +11,16 @@
     src: url('../fonts/richard_hamilton/Richard\ Hamilton.ttf');
 }
 
-
+html{
+    font-size: 62.5%;
+    /* the font size of html tag = 62.5 * 16 / 100 = 10px */
+}
 .par{
     /* ctrl + k + c for comment */
     /* ctrl + k + u for uncomment */
     /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
     /* font-family: 'Just Another Hand', cursive; */
     /* font-family: 'Zen Loop', cursive; */
-    font-family: 'richard';
-    font-size: 40px;
+    font-family: 'fbw2';
+    font-size: 2rem;
 }
