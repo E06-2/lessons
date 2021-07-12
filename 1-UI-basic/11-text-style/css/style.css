@@ -1,0 +1,22 @@
+.par{
+    color: gray;
+    font-size: 2rem;
+    text-align: left; /*left, right, center, justify*/
+    direction: rtl;/*ltr, rtl*/
+    text-decoration: underline;/*overline, line-through, underline, none*/
+    text-transform: uppercase; /*capitalize, lowercase, uppercase*/
+    text-indent: 100px;
+    letter-spacing: 5px;
+    line-height: 1.9;
+    word-spacing:30px ;
+}
+.link{
+text-decoration: none;
+}
+
+del{
+    text-decoration: none;
+}
+.par1{
+    text-indent: 100px;
+}
