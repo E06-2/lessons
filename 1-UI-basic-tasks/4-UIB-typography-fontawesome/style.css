@@ -4,4 +4,19 @@
 }
 
 
+h1{
+    text-align: center;
+    text-decoration: underline;
+}
+
+.review{
+    text-align: center;
+    text-transform: uppercase;
+    text-shadow: 1px 1px grey;
+}
+.media-links{
+    text-align: center;
+}
+
+
 

@@ -1,0 +1,26 @@
+.box{
+    background-color: rgb(234, 130, 238);
+    width: 80vw;
+    margin: auto;
+    height: 30vh;
+    margin-top: 35vh;
+    padding: 20px;
+    box-shadow: -3px 15px 36px 20px rgba(255, 254, 254, 0.61);
+    border-radius: 50px 0 50px 0;
+
+    
+}
+h1{
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(100, 100, 100, 0.411);
+}
+
+body{
+    background: linear-gradient(270deg, rgb(136, 72, 138),
+    rgb(56, 12, 65),rgb(219, 16, 209));
+}
+
+.box:hover{
+    box-shadow: none;
+}

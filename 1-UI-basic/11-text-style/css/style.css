@@ -9,6 +9,8 @@
     letter-spacing: 5px;
     line-height: 1.9;
     word-spacing:30px ;
+    /*text-shadow: [distance from left] [distance from bottom] [blur] [color];*/
+    text-shadow: 5px 5px 10px blue;
 }
 .link{
 text-decoration: none;
@@ -19,4 +21,8 @@ del{
 }
 .par1{
     text-indent: 100px;
+}
+
+.sp{
+    vertical-align: super;/*super, sub*/
 }
