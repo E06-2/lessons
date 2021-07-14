@@ -1,0 +1,98 @@
+body{
+    margin: 0px;
+}
+
+.login-container{
+    width: 75%;
+    border: 1px solid;
+    /* margin: top-buttom right-left */
+    margin: 10px auto;
+    padding: 2%;
+    border-radius: 3%;
+}
+
+/* selectorname>element1>element2
+    element2 is directly inside element1
+    element1 is directly inside selectorname
+#######################
+    selectorname element1 element2
+    element2 is inside element1 it could be directly or not
+*/
+.login-container form>input{
+    border: 1px solid ;
+    display: block;
+    height: 35px;
+    width: 95%;
+    margin: 14px 0px;
+    border-radius: 3%;
+}
+
+.login-container>form>button{
+    background-color: rgb(2, 109, 2);
+    height: 35px;
+    width: 45%;
+    display: block;
+    margin: 14px 0px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    border-radius: 3%;
+}
+
+.login-container>form>button:hover{
+    background-color: green;
+    opacity: 0.5;
+}
+
+.login-container form>.forgetPassword{
+    float: right;
+}
+
+.login-container>form input[type=checkbox]{
+    /* prevent default settings   */
+    /* -webkit-appearance: none; */
+    background-color: rgb(2, 109, 2);
+    color: brown;
+    border: 1px solid;
+    width: 25px;
+    height: 25px;
+}
+.login-container>form input[type=checkbox]:active{
+    box-shadow: 0 1px 2px red;
+}
+
+/* select all inputs which have type=password */
+/* input[type=password]{
+    border: 1px solid blue;
+} */
+
+/* when the screen is less than 730px do this stuff */
+@media screen and (max-width: 730px){
+    /* make button ful width */
+    .login-container>form>button{
+        width: 95%;
+    }
+    /* make forgetPassword normal (no floating) */
+    .login-container form>.forgetPassword{
+        float: none;
+    }
+}
+/* for small devices */
+@media (min-width: 570px) {
+    
+}
+/* medium devices etc Tablet, Ipad */
+@media (min-width: 770px){
+
+}
+
+/*  devices etc Laptops, Desktops */
+@media (min-width: 1000px){
+
+}
+
+/*  larg screens */
+@media (min-width: 1200px){
+
+}
+
