@@ -1,0 +1,32 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    /* box-sizing: border-box; */
+}
+.div1{
+    height: 20vh;
+    background-color: aqua;
+    margin: 2vw;
+    display: inline-block;
+    width: 28vw;
+    box-shadow: 5px 5px 5px grey;
+
+}
+
+.div2{
+    height: 20vh;
+    background-color: lightgreen;
+    margin: 2vw;
+    display: inline-block;
+    width: 28vw;
+    box-shadow: 5px 5px 5px grey;
+}
+
+.div3{
+    height: 20vh;
+    background-color: lightsteelblue;
+    margin: 2vw;
+    display: inline-block;
+    width: 28vw;
+    box-shadow: 5px 5px 5px grey;
+}
