@@ -6,6 +6,7 @@
 .nav{
     list-style-type: none;
     background-color: aqua;
+    padding: 10px;
 }
 
 .nav>li{
@@ -16,10 +17,21 @@
     margin-right: 10px;
     background-color: red;
     height: 35px;
-    padding-top: 5px;
+    /* padding-top: 5px; */
+    border-radius: 10px 0 10px 0;
 }
 .nav>li>a{
+    display: inline-block;
     text-decoration: none;
     font-weight: bold;
     color: white;
+    height: 100%;
+    width: 100%;
+    padding-top: 5px;
+    
+}
+
+.nav>li:hover{
+    box-shadow: 5px 5px 5px grey;
+    transform: scale(1.2);
 }

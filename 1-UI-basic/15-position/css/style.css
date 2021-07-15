@@ -1,0 +1,30 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.top{
+    background-color: deepskyblue;
+    width: 28px;
+    height: 28px;
+    box-shadow: 5px 5px 12px grey;
+    
+    position: fixed;
+    /* left: calc(50% - 14px) ;
+    top: calc(50% - 14px); */
+    right: 10px;
+    bottom: 10px;
+    /* bottom: 10px; */
+}
+.top>a{
+    display: block;
+    height: 100%;
+    text-align: center;
+    padding-top: 2px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    border: 1px solid black;
+
+    
+}
