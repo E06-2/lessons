@@ -1,0 +1,7 @@
+a:nth-child(1){
+    display: none;/*inline, block, inline-block, none*/
+    background-color: aqua;
+    width: 200px;
+    /* visibility: hidden; */
+
+}
