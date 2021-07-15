@@ -1,0 +1,25 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.nav{
+    list-style-type: none;
+    background-color: aqua;
+}
+
+.nav>li{
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    border: 2px solid black;
+    margin-right: 10px;
+    background-color: red;
+    height: 35px;
+    padding-top: 5px;
+}
+.nav>li>a{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
