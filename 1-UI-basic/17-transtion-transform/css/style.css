@@ -15,7 +15,16 @@
     /* transform: skew(20deg, 20deg); */
     /* transform: scaleX(1.5); */
     /* transform: translate(-50px, 100px); */
-    transform: scaleZ(2) rotateX(45deg);
-
-
+    /* transform: scaleZ(2) rotateX(45deg); */
+    /* transition: background-color 2s, transform 5s; */
+    transition-property:transform ;
+    transition-duration: 2s ;
+    transition-delay: 1s;
+    transition-timing-function: cubic-bezier(0.000, 0.750, 0.980, 0.335);
 }
+
+.div1:hover{
+    transform: scale(2);
+    background-color: lightsalmon;
+}
+

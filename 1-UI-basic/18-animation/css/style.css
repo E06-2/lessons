@@ -1,0 +1,66 @@
+.div1{
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+    position: relative;
+    /* animation-name: box;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-delay: 2s;
+    animation-timing-function: cubic-bezier(1,-0.39, 1, 0.46); */
+    animation: box 5s infinite alternate cubic-bezier(0.075, 0.82, 0.165, 1) 2s;
+}
+.div1:hover{
+    animation-play-state: paused;
+}
+
+@keyframes box {
+    0%{
+        left: 0;
+        top: 0;
+    }
+
+    10%{
+        left: 100px;
+        top: 0;
+    }
+
+    20%{
+        left: 100px;
+        top: 100px;
+    }
+    30%{
+        left: 200px;
+        top: 100px;
+    }
+    40%{
+        left: 200px;
+        top: 200px;
+    }
+    50%{
+        left: 300px;
+        top: 200px;
+    }
+    60%{
+        left: 300px;
+        top: 300px;
+    }
+    70%{
+        left: 400px;
+        top: 300px;
+    }
+    80%{
+        left: 400px;
+        top: 400px;
+    }
+    90%{
+        left: 500px;
+        top: 400px;
+    }
+    100%{
+        left: 500px;
+        top: 500px;
+    }
+
+}
