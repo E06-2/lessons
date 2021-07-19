@@ -7,6 +7,7 @@
     border: 2px solid black;
     padding: 10px;
     height: 10vh;
+    overflow-y: scroll;
 }
 .footer{
     border: 2px solid black;
@@ -20,4 +21,22 @@
     background-repeat: no-repeat;
     background-position-y: 80%;
     height: 80vh;
+    position: relative;
+}
+.content img:nth-child(1){
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+}
+
+.content img:nth-child(2){
+    position: absolute;
+    bottom: 200px;
+    right: 100px;
+    transition: all 1s;
+}
+
+.content img:nth-child(2):hover{
+    bottom: 150px;
+    right: 50px;
 }

@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.div1{
+    height: 100px;
+    width: 100px;
+    background-color: aqua;
+    text-align: center;
+    padding-top: 30px;
+    margin: 10px;
+    /* transform: rotate(45deg); */
+    /* transform: rotateY(45deg); */
+    /* transform: skew(20deg, 20deg); */
+    /* transform: scaleX(1.5); */
+    /* transform: translate(-50px, 100px); */
+    transform: scaleZ(2) rotateX(45deg);
+
+
+}

@@ -1,0 +1,13 @@
+.sticky{
+    position: sticky;
+    top: 10px;
+    left: 10px;
+
+    background-color: aqua;
+    border: 2px solid black;
+    padding: 10px;
+    width: 200px;
+}
+body{
+    width: 2000px;
+}
