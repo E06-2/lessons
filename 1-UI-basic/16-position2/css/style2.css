@@ -1,0 +1,23 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.top{
+    border: 2px solid black;
+    padding: 10px;
+    height: 10vh;
+}
+.footer{
+    border: 2px solid black;
+    padding: 10px;
+    height: 10vh;
+}
+
+.content{
+    background-image: url('../imgs/bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 80%;
+    height: 80vh;
+}
