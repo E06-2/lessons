@@ -1,0 +1,150 @@
+body{
+    margin: 0px;
+}
+
+*{
+    /* border: 1px solid; */
+    box-sizing: border-box;
+}
+
+.container{
+    border: 1px solid;
+    width: 90%;
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+    /* margin-top: 50px; */
+    /* margin-left: 25px; */
+    background-color: #bdbdbd;
+    margin: 2% 5%;
+}
+
+.h2-header{
+    font-size: 6vw;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.h1-header{
+    font-size: 13vw;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+.left-header{
+    border-right: 1px solid ;
+    line-height: 3.5vw;
+    font-size: 2.5vw;
+    padding-right: 5px;
+}
+.left-header>span{
+    font-size: 1.3vw;
+}
+
+.right-header{
+    border-left: 1px solid ;
+    line-height:  3.5vw;
+    font-size: 2.5vw;
+}
+.right-header>span{
+    display: block;
+    text-align: center;
+    font-size: 5vw;
+    margin-top: 5px;
+    font-weight: bold;
+    /* border-top: 2px solid; */
+}
+
+.spanHeader{
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+.spanHeader span{
+    font-size: 2vw;
+}
+
+.center-span{
+    text-align: center;
+}
+
+.left-span{
+    text-align: right;
+}
+
+.mainHeader{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-size: 6vw;
+    font-weight: bold;
+    border-bottom: 1px solid;
+    letter-spacing: 2.5px;
+}
+hr{
+    height: 10px;
+    background-color: black;
+}
+
+.leftArticle{
+    border-right: 1px solid;
+    padding-right: 18px;
+    
+}
+
+.leftArticle>img{
+    width: 100%;
+    border: 1px solid;
+    
+}
+.leftArticle>p{
+    text-align: justify;
+}
+
+.middleArticle{
+    padding-left: 10px;
+    padding-right: 18px;
+}
+.middleArticle>img{
+    width: 100%;
+    height: 500px;
+    border: 1px solid;
+}
+.middleArticle>p{
+    text-align: justify;
+}
+.middleArticle>h2{
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    font-size: 2.5vw;
+}
+.rightArticle{
+    border-left: 1px solid;
+    padding-left: 18px;
+}
+.rightArticle>h2{
+    font-weight: bold;
+}
+.rightArticle>p{
+    text-align: justify;
+}
+.rightArticle>img{
+    width: 100%;
+    border-left: 1px solid;
+}
+
+@media screen and (max-width: 900px){
+    .spanHeader div{
+        width: 100%;
+    }
+    .center-span{
+        text-align: left;
+        float: left;
+    }
+    
+    .left-span{
+        text-align: left;
+        float: left;
+    }
+}
