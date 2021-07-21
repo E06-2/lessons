@@ -1,0 +1,111 @@
+.leftsidebar{
+    height: 100vh;
+    width: 100%;
+    background-color: gray;
+}
+.header{
+    height: 20vh;
+    width: 100%;
+    background-color: blue;
+    animation: changeColor;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    transition: 1s;
+}
+
+.content{
+    height: 80vh;
+    width: 100%;
+    background-color: brown;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(60, 255, 0);
+    position: relative;
+    /* left: calc(100% - 100px); */
+    animation: moveBox;
+    animation-duration: 18s;
+    animation-iteration-count: infinite;
+}
+
+.ball{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: blue;
+    position: relative;
+    animation: moveBall;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes  changeColor{
+    from{
+        background-color: blue;
+    }
+    to{
+        background-color: yellow;
+    }
+}
+
+
+/* Time 18s */
+@keyframes moveBox {
+    /* 18s ==== 100% */
+    /* 04s ==== x?%*/
+    /* 03s ==== y?%*/
+    /* 05s ==== z?%*/
+    /* 06s ==== i?%*/
+    /* x = (100 * 4) / 18 == 22.22% */
+    /* y = (100 * 3) / 18 == 16.66% + 22.22% = 38.88%*/
+    /* z = (100 * 5) / 18 == 27.77% + 38.88% = 66.65%*/
+    /* i = (27.77 * 6) / 5 == 33.32% +66.65%  = 100%*/
+    /* 1- Original State ===> */
+    0%{
+        left:0;
+        top:0;
+        
+    }
+    /* 2- Move Right */
+    22.22%{
+        left: calc(100% - 100px);
+        top:0;
+    }
+    /* 3- Move Down */
+    38.88%{
+        left: calc(100% - 100px);
+        top: calc(80vh - 100px);
+    }
+    /* Move Left */
+    66.65%{
+        left: 0;
+        top: calc(80vh - 100px);
+    }
+    /* Go to Original */
+    100%{
+        left: 0;
+        top: 0;
+    }
+}
+
+@keyframes moveBall {
+    /* 8s ===== 100% */
+    /* 5s ===== x?% */
+    /* 3s ===== y?% */
+    /* x = (100 * 5) /8 = 62.5% */
+    /* y = (100* 3 ) /8  = 37.5*/
+    0%{
+        top:0;
+        left: 0;
+    }
+    62.5%{
+        top: calc(100vh - 100px);
+        left: calc(100% - 100px)
+    }
+    100%{
+        top:0;
+        left: 0;
+    }
+}
