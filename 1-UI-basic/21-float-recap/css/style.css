@@ -1,0 +1,23 @@
+.div1{
+    background-color: lightblue;
+    height: 200px;
+    float: left; /*left, right , none*/
+    width: 200px;
+}
+
+.div2{
+    background-color: lightgray;
+    height: 100px;
+
+    float: left;
+    width: 200px;
+    clear:both;
+}
+
+.div3{
+    background-color: lightpink;
+    height: 100px;
+
+    float: left;
+    width: 200px;
+}
