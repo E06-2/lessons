@@ -1,0 +1,61 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+.top{
+    border: 2px solid black;
+    padding: 10px;
+    height: 10vh;
+    overflow-y: scroll;
+}
+.footer{
+    border: 2px solid black;
+    padding: 10px;
+    height: 10vh;
+}
+
+.content{
+    background-image: url('../imgs/bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: 80%;
+    height: 80vh;
+    position: relative;
+}
+
+/* first flower */
+.content img:nth-child(1){
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+}
+
+/* bee */
+.content img:nth-child(2){
+    position: absolute;
+    bottom: 200px;
+    right: 100px;
+    /* transition: all 1s; */
+}
+
+/* third flower */
+.content img:nth-child(3){
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    transform: rotateY(180deg);
+}
+
+/* fourth flower */
+.content img:nth-child(4){
+    position: absolute;
+    bottom: -50px;
+    left: 30%;
+    transform: scale(0.3);
+}
+
+/* .content img:nth-child(2):hover{
+    bottom: 150px;
+    right: 50px;
+} */
