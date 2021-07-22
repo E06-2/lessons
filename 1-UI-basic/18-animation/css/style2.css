@@ -29,6 +29,7 @@
     position: absolute;
     bottom: 5px;
     right: 10px;
+    z-index: 9999;
 }
 
 /* bee */
@@ -37,21 +38,26 @@
     bottom: 200px;
     right: 100px;
     /* transition: all 1s; */
+    z-index: 9999;
+
+    animation-name: beemove;
+    animation-iteration-count: infinite;
+    animation-duration: 6s;
 }
 
-/* third flower */
+/* second flower */
 .content img:nth-child(3){
     position: absolute;
     bottom: 5px;
-    left: 10px;
+    right: calc(100% - 206px);
     transform: rotateY(180deg);
 }
 
-/* fourth flower */
+/* third flower */
 .content img:nth-child(4){
     position: absolute;
     bottom: -50px;
-    left: 30%;
+    right: calc(50% - 206px);
     transform: scale(0.3);
 }
 
@@ -59,3 +65,26 @@
     bottom: 150px;
     right: 50px;
 } */
+
+@keyframes beemove {
+    0%{
+        bottom: 150px;
+        right:50px;
+        z-index: 9999;
+    }
+    33.33%{
+        bottom: 150px;
+        right: calc(100% - 206px);
+        transform: rotateY(180deg);
+    }
+    66.66%{
+        bottom: 0px;
+        right: calc(50% - 206px);
+        transform: scale(0.3);
+        z-index: 999;
+    }
+    100%{
+        bottom: 150px;
+        right:50px;
+    }
+}
