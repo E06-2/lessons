@@ -9,6 +9,7 @@ html{
 }
 
 .banner{
+    position: relative;
     margin: 1rem;
     height: 80vh;
     background: linear-gradient(
@@ -29,3 +30,79 @@ html{
 /* .banner:hover{
     clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
 } */
+
+.blur{
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+
+    transition: opacity 1s;
+}
+
+.menubtn{
+    height: 5rem;
+    width: 5rem;
+    background-color: rgb(179, 194, 49);
+    position: absolute;
+    z-index: 9999;
+    border-radius: 50%;
+    left: 1rem;
+    top: 1rem;
+    box-shadow: -3px -1px 10px rgba(0, 0, 0, 0.657);
+}
+
+.menu{
+    position: absolute;
+    /* background-color: green; */
+    z-index: 9999;
+    /* width: 30%; */
+    
+    height: 50%;
+    top: 25%;
+    left: 35%;
+    list-style: none;
+    backface-visibility: hidden;
+
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+
+    transition: opacity 1s;
+}
+.menu > li{
+    margin-bottom: 1.5rem;
+}
+
+.menu > li > a{
+    font-size: 3.5rem;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    color: rgb(73, 61, 61);
+    transition: transform 0.2s;
+    
+}
+.menu > li > a:hover{
+    transform: scale(1.5);
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.397);
+}
+
+#toggle{
+    display: none;
+}
+
+/*here are the magic
+selector using pseudo class to show content depending on 
+checkbox status (checked)
+*/
+
+#toggle:checked + .banner > .menu{
+    opacity: 1;
+    width: 30%;
+    overflow: visible;
+}
+
+#toggle:checked + .banner > .blur{
+    opacity: 1;
+}
