@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+.banner{
+    margin: 1rem;
+    height: 80vh;
+    background: linear-gradient(
+        to right bottom
+        , rgba(0, 129, 0, 0.664), transparent) ,url(../imgs/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 90%;
+    background-position-x: 90%;
+    /*test clip-path with transition*/
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transition: clip-path 1s ; */
+
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+
+}
+
+/* .banner:hover{
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+} */
