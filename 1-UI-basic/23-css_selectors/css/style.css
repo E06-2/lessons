@@ -1,0 +1,78 @@
+/* 
+    selector:pseudo{
+
+    }
+*/
+/* Selector by Tagname
+tagname{}
+multiple elements
+*/
+body{
+    background-color: #2e2e2e;
+    color: #e2e2e2;
+}
+
+h1{
+    text-align: center;
+}
+
+/* select by classname:
+.classname{}
+multiple elements
+dont care about tagname
+*/
+
+
+.text{
+    background-color: azure;
+    color: #2e2e2e;
+}
+
+.red{
+    color: red;
+}
+
+
+
+/* Selector by Id
+#id{}
+one element
+priority 1
+it will override all previous css propereties
+*/
+#t{
+    background-color: blue;
+    color: yellow;
+}
+
+/* nesting selectors */
+/* selector1>selector2 */
+/* Selector2 is directly inside Selector1 */
+/* "directly is on level inside" */
+/* Selector1{ space }Selector2 */
+/* Selector2 is inside Selector1 not important directly */
+/* any <p> inside <div> */
+div>p{
+    color: tomato;
+}
+.a>.c{
+    color: teal;
+}
+.c>.c{
+    color: tan;
+}
+
+/* Select multiple elements */
+/* selector1, selector2, selector3 */
+/* selector1 and selector2 and selector3 */
+a, i, strong{
+    color: violet;
+    display: block;
+}
+
+/* selector1 + selector2 */
+/* selector2 comes directly after selector1 "Not inside" */
+h2 + p{
+    border: 1px solid yellow;
+}
+

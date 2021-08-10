@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Selectors</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!-- 
+        <tagname attribut="value">content
+        </tagname>
+     -->
+    <h1>Selectors</h1>
+    <h2>Selector by Tagname</h2>
+    <p>Select all element which has the same Tagname</p>
+    <hr />
+    <h2>Selector by classname</h2>
+    <p class="text red">Select using "." to refare to class</p>
+    <div class="text">this one also has aclass "text"</div>
+    <hr />
+    <h2>Selector by ID</h2>
+    <p id="t">Only one element has "t" id in this document</p>
+    <hr />
+    <h2>Nesting Classes</h2>
+    <div>
+      <p>This is normal p inside div</p>
+    </div>
+    <p>This is normal p not inside div</p>
+    <div class="a">
+        <div class="c">This is p has class "c" inside div has class "a"
+            <p class="c">This is p has class "c" inside div has class "a"</p>
+        </div>
+    </div>
+    <a href="#">Link</a>
+    <i>anything</i>
+    <strong>strong</strong>
+  </body>
+</html>

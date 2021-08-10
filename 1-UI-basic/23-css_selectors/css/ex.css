@@ -1,0 +1,46 @@
+h1{
+    color: red;
+}
+
+h2{
+    border: 1px solid;
+    color: blue;
+}
+
+h2 + p{
+    border: 1px dashed;
+}
+
+div>p{
+    background-color: blue;
+}
+
+div>p + p{
+    background-color: yellow;
+}
+
+.a>.b>p{
+    color: red;
+    background-color: blue;
+}
+
+.a>.b>p +p{
+    color: blue;
+    background-color: red ;
+}
+
+.b>.a>p{
+    color:brown;
+    background-color: white;
+    border: 1px dotted;
+}
+
+.b>.a>p + p{
+    color: tomato;
+    background-color: black;
+}
+
+div + div>p{
+    color: white;
+    background-color: black;
+}

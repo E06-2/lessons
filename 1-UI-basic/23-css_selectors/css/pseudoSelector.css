@@ -1,0 +1,19 @@
+h1{
+    /* !important forcely apply this command */
+    /* use !important to override */
+    color:red !important
+}
+/* Css syntax:
+    1-  any first css command followd with "!important"
+    2- inline Styling
+    3- id name
+    4- class name
+    5- tag name
+    (its easy to find tagname before finding classname)
+*/
+.txt{
+    color: brown
+}
+p{
+    color: rgb(46, 43, 226);
+}
