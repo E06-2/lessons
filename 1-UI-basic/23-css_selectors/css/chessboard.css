@@ -1,0 +1,58 @@
+body{
+    margin: 0px;
+    box-sizing: border-box;
+}
+/* rows (8)*/
+.chessboard>div{
+    /* border:1px solid; */
+    /* chess board width */
+    width: 100%;
+    /* row height */
+    height:12vh;
+}
+/* cells (8 * 8 = 64) */
+.chessboard>div>div{
+    height:12vh;/*12% from view port*/
+    width: 12%;
+    border: 1px solid ;
+    float: left;
+}
+
+/* each odd row ==> each odd cell inside it 
+selected rows: 1, 3, 5, 7
+selected cells: 1, 3, 5, 7
+*/
+.chessboard>div:nth-child(odd)>div:nth-child(odd){
+    background-color: brown;
+}
+/* each odd row ==> each even cell inside it 
+selected rows: 1, 3, 5, 7
+selected cells: 2, 4, 6, 8
+*/
+.chessboard>div:nth-child(odd)>div:nth-child(even){
+    background-color: rgb(0, 0, 0);
+}
+
+/* each even row ==> each odd cell inside it 
+selected rows: 2, 4, 6, 8
+selected cells: 1, 3, 5, 7
+*/
+.chessboard>div:nth-child(even)>div:nth-child(odd){
+    background-color: rgb(0, 0, 0);
+}
+
+/* each even row ==> each even cell inside it 
+selected rows: 2, 4, 6, 8
+selected cells: 2, 4, 6, 8
+*/
+.chessboard>div:nth-child(even)>div:nth-child(even){
+    background-color: brown;
+}
+
+/* .chessboard>div:nth-child(5)>div:nth-child(5){
+    background-color: yellow;
+} */
+.chessboard>div>div:hover{
+    opacity: 0.5;
+    transition: 1s;
+}
