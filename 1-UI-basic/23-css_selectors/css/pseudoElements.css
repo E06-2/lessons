@@ -48,7 +48,62 @@ selector::PseudoElement{
     border: 1px solid;
 }
 
+/* selector1:not(selector2)
+select everything from selector1 without selector2
+*/
 .notSelection>p:not(.n){
     color: blue;
 }
+
+.link{
+    color: white;
+    background-color: green;
+    text-decoration: none;
+    border-radius: 7px;
+    width: 64px;
+    height: 28px;
+    display: inline-block;
+    padding: 2%;
+}
+
+.tap{
+    /* opacity: 0; */
+    /* color: red */
+    display: none;
+    border: 0.5px solid;
+    margin: 2%;
+    padding: 2%;
+}
+/* any HTML Element has an id, should be in URL after # */
+ /*:target{
+    display: block;
+} */
+
+.tap h2{
+    text-align: center;
+    /* border: 0.5px solid; */
+}
+
+.tap p{
+    text-align: justify;
+}
+
+.tap p::first-letter{
+    font-size: 2rem;
+}
+
+.tap p::first-line{
+    color: tomato;
+}
+#id4{
+    width: 100px;
+    height: 100px;
+    background-color: turquoise;
+    transition: 2s;
+}
+
+:target{
+    transform: rotate(90deg);
+}
+
 

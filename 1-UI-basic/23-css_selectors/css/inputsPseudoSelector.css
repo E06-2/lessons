@@ -1,0 +1,70 @@
+form{
+    border: 1px solid;
+    min-height: 500px;
+    padding: 2%;
+}
+
+label, input{
+    display: block;
+}
+/* for all inputs */
+input{
+    border: 1px solid;
+}
+
+/* for all inputs while we focus on */
+input:focus{
+    color: rgb(202, 199, 5);
+    outline: 1px solid yellow;
+    background-color: tomato;
+}
+
+/* for all inputs whiche are readonly */
+input:read-only{
+    color: white;
+    background-color: #2e2e2e;
+}
+/* all inputs which has no readonly attr */
+/* input:read-write{
+    background-color: green;
+} */
+
+/* all inputs are required */
+input:required{
+    color: red;
+    background-color: blue;
+}
+
+/* all inputs (number) in range min & max */
+input:in-range{
+    color:wheat;
+    background-color: green;
+}
+
+/* all inputs (number) out of range min & max */
+input:out-of-range{
+    color: wheat;
+    background-color: red;
+}
+
+/* all inputs valid */
+input:valid{
+    color: #ffffff;
+    background-color: #23a004;
+}
+
+/* all inputs invalid */
+input:invalid{
+    color: yellow;
+    background-color: red;
+}
+
+/* all inputs (checkbox) checked */
+input:checked{
+    outline: 5px solid green;
+}
+
+/* all inputs (numbers) */
+input[type="number"]{
+    outline: 2px solid red;
+}

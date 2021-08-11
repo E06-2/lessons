@@ -1,0 +1,66 @@
+.register{
+    width: 90%;
+    min-height: 500px;
+    border: 1px solid;
+    margin: auto;
+    box-sizing: border-box;
+    /* text-align: center; */
+}
+
+.register form{
+    padding: 2%;
+}
+.register>h2{
+    text-align: center;
+}
+.register input:not(input[type=radio]):not(input[type=submit]){
+    float: right;
+    width: 50%;
+    height: 31px;
+    display: block;
+    margin-bottom: 1%;
+}
+.register input[type=radio]{
+    float: right;
+    display: block;
+    margin-bottom: 1%;
+    width: 50%;
+}
+.register .radioCollection{
+    float: right;
+    height: 31px;
+    width: 51%;
+    margin-bottom: 1%;
+}
+.register .radioCollection input{
+    display: block;
+    float: right;
+    width: 50%;
+    height: 20px;
+}
+.register .radioCollection label{
+    display: block;
+    float: left;
+    width: 40%;
+}
+.register label:not(.radioCollection label){
+    display: block;
+    width: 40%;
+    height: 31px;
+    float: left;
+    margin-bottom: 1%;
+    padding: 3px;
+}
+.register input[type=submit]{
+    width: 50%;
+    margin: auto;
+    display: block;
+    height: 31px;
+}
+
+.register input:invalid{
+    background-color: yellow;
+}
+
+
+
