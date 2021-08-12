@@ -1,0 +1,52 @@
+.container{
+    display: flex;
+    height: 500px;
+    background-color: lightgray;
+    justify-content: center;
+    align-items: center;
+}
+.sub{
+    background-color: aqua;
+    display: flex;
+    
+    /*flex-direction: row; /*row, row-reverse, column, column-reverse*/
+    /*flex-wrap: wrap;/*nowrap, wrap, wrap-reverse*/
+    /*shorthand to control direction and wrap*/
+    flex-flow: row wrap;
+    /*
+    space-around: add spaces at the beginning, end and between the children
+    space-between: add spaces ONLY between the children
+    space-evenly: add EQUAL spaces between the children and also at beginning and the end
+     */
+     /*control horizontal align*/
+    justify-content: space-evenly;/*center, flex-start, flex-end, space-around, space-between, space-evenly*/
+
+    /*control vertical align*/
+    align-items: baseline ;/*stretch, center, flex-start, flex-end, baseline*/
+    /* padding-top: 60px; */
+    
+
+}
+
+.sub > div{
+    background-color: blue;
+    margin: 15px;
+    padding: 15px;
+    font-size: 30px;
+    color: white;
+    text-align: center;
+}
+
+.sub > div:nth-child(1){
+font-size: 50px;
+}
+.sub > div:nth-child(2){
+    font-size: 20px;
+}
+.sub > div:nth-child(3){
+    font-size: 30px;
+}
+.sub > div:nth-child(4){
+    font-size: 10px;
+}
+

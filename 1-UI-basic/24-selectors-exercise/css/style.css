@@ -1,18 +1,41 @@
 /*
 this selector gonna select ANY h2 element
 inside element with class div1 even if h2 is nested
-
-*/
-/* .div1  h2{
+ .div1  h2{
     color: red;
-} */
-
+} 
+*/
 
 /*
 this selector gonna select ANY h2 element
 DIRECTLY inside element with class div1 
-
-*/
 .div1 > h2{
     color: red;
+}
+*/
+
+/*
+selectors specificity:
+1st: style with !important
+2nd: inline style
+3rd: selector with id #[id]
+4th: more specific selectors
+*/
+
+
+
+.div1 > h2.title1{
+    color: yellow;
+}
+
+.div1 > h2{
+    color: red;
+}
+
+.div1 div h2{
+    color: green;
+}
+
+.div1 h2 {
+    color: blue;
 }
