@@ -1,0 +1,18 @@
+/*
+this selector gonna select ANY h2 element
+inside element with class div1 even if h2 is nested
+
+*/
+/* .div1  h2{
+    color: red;
+} */
+
+
+/*
+this selector gonna select ANY h2 element
+DIRECTLY inside element with class div1 
+
+*/
+.div1 > h2{
+    color: red;
+}
