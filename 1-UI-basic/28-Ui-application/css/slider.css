@@ -30,7 +30,7 @@ input[name="switch"]{
 
 .mainSlider{
     width: 75%;
-    height: 400px;
+    height: 80vh;
     padding: 2%;
     box-shadow: 10px 20px 5px rgba(0,0 , 0, 0.75);
     margin: auto;
@@ -38,12 +38,12 @@ input[name="switch"]{
     border:1px solid
 }
 .singleSlide>img{
-    width: 87%;
-    height: 309px;
+    width: 88%;
+    height: 56vh;
     position: absolute;
     border: 1px solid;
-    top:93px;
-    left: 33px;
+    top:26%;
+    left: 5%;
     opacity: 0;
     transition: 1s;
     transform: scale(1.1);
