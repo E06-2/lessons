@@ -1,0 +1,63 @@
+*{
+    /* border: 1px solid; */
+    font-family: 'Courier New', Courier, monospace;
+}
+/* main conatiner for navbar */
+.header{
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    background-color: #a2a2a2;
+    border-radius: 5px;
+    box-shadow: 2px 4px 15px 9px rgba(0, 0, 0, 0.7);
+}
+
+/* logo (<h2>) */
+.header h2{
+    color: #194866;
+    margin: 0;
+    float: left;
+    font-size: 1.2em;
+}
+.header .nav{
+    list-style: none;
+    display: inline-block;
+    margin-top: 5px;
+}
+/* ul and h2 */
+.header .nav, .header h2{
+    padding: 10px 15px;
+    text-transform: uppercase;
+    text-align: center;
+}
+/* all li tags inside ul(nav) */
+.nav>li{
+    display: inline;
+}
+/* all a inside ul */
+.nav a{
+    /* prevent default attributes */
+    text-decoration: none;
+    color: #34495e;
+    font-size: 1em;
+}
+
+/* active link */
+.header .nav .active{
+    background-color: #5789a8;
+}
+.nav a:hover{
+    color: #718daa;
+}
+/* Media query (screen sizing)*/
+@media (max-width: 640px){
+    .header, .nav, .nav li{
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    /* .nav li{
+        display: flex;
+        flex-direction: column;
+    } */
+}
+
