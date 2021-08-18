@@ -1,0 +1,62 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+/* parent */
+.container{
+    /* height: 100vh; */
+    display: grid;
+    /* define columns & set width for them */
+    grid-template-columns: 10% 20% auto auto auto;
+    /* set height for each row */
+    /* grid-template-rows: 80vh ; */
+    /* space between columns */
+    /* column-gap: 10px; */
+    /* space between rows */
+    /* row-gap:20px; */
+    /* set row&column gap
+    first row second column
+    */
+    /* gap:50px 20px; */
+}
+
+/* children */
+.container div{
+    border: 1px solid;
+    text-align: center;
+}
+
+.container div:nth-child(4){
+    /* grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start:1;
+    grid-row-end:3; */
+}
+/* expand item horizontaly */
+.container div:nth-child(6){
+    /* grid-column-start: 1;
+    grid-column-end: 4; */
+}
+
+.container div:nth-child(5){
+    /* grid-column-start: 2;
+    grid-column-end:4; */
+}
+/* expand element verticaly */
+.container div:nth-child(1){
+    /* grid-row-start: 1;
+    grid-row-end:3; */
+}
+
+.container div:nth-child(7){
+    /* position in the grid
+    first argumnet row position
+    second argument column position.
+    span (value) row
+    span (value) column
+    */
+    grid-area:1 / 2 / span 2 / span 3 ;
+}
