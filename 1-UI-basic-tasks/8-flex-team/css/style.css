@@ -148,8 +148,47 @@ checkbox status (checked)
 
 .card > p{
     font-size: 1.5rem;
+    text-align: center;
 }
 
+.card ul{
+    display: flex;
+    list-style: none;
+}
+.card > ul > li{
+    margin: 0.5rem;
+    font-size: 2rem;
+    color: gray;
+}
+.card > ul > li > a{
+    color: gray;
+}
+
+.card > ul > li:nth-child(1) > a:hover{
+    color: blue;
+}
+.card > ul > li:nth-child(2) > a:hover{
+    color: skyblue;
+}
+.card > ul > li:nth-child(3) > a:hover{
+    color: red;
+}
+.card > ul > li:nth-child(4) > a:hover{
+    color: rgb(66, 66, 241);
+}
+
+@media screen and (max-width: 800px) {
+    .team {
+        flex-direction: column;
+    }
+    .card{
+        width: 100%;
+    }
+    .card > img {
+        width: 30vw;
+        height: 30vw;
+    }
+}
 
 
 /*Team Section end*/
