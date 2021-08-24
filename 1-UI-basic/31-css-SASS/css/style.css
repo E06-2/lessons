@@ -1,0 +1,42 @@
+/*
+multiple lines comments
+*/
+@import url(/home/mostafa/Documents/lessons/1-UI-basic/31-css-SASS/css/_main.css);
+body {
+  background-color: cadetblue;
+}
+
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+.container > .row > .col-6 > h2 {
+  color: green;
+  background-color: #4e4e4e;
+}
+
+.container > .row > .col-6 > #text {
+  color: #4e4e4e;
+}
+
+.container > .row > .col-6 > #text:hover {
+  color: aqua;
+}
+
+.content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+}
+
+.content > .section {
+  border: 1px solid #4e4e4e;
+  padding: 5%;
+}
+
+.content > .section > p {
+  text-align: justify;
+}
+/*# sourceMappingURL=style.css.map */
