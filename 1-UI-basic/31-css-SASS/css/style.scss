@@ -1,0 +1,42 @@
+// import an external css file
+// one line comment
+/*
+multiple lines comments
+*/
+// @use 
+@import 'main';
+@import   'main1';
+// define a color
+$myColor : #4e4e4e;
+.container{
+    width: 90%;
+    margin: auto;
+    >.row{
+        >.col-6{
+            >h2{
+              color:green;  
+              background-color: $myColor;
+            }
+            >#text{
+                color: $myColor;
+            }
+            >#text:hover{
+                color: aqua;
+            }
+        }
+    }
+}
+
+.content{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    // grid-template-rows: 100px;
+    >.section{
+        border: 1px solid $myColor;
+        padding: 5%;
+        // overflow: scroll;
+        >p{
+            text-align: justify;
+        }
+    }
+}
