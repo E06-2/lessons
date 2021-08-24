@@ -6,8 +6,25 @@ multiple lines comments
 // @use 
 @import 'main';
 @import   'main1';
-// define a color
+// define a color as a variable
 $myColor : #4e4e4e;
+// define a several variabls
+/*
+mixin is :
+multiple attributes
+function (arguments, parameters)
+*/
+@mixin buttonStyle($textColor, $background, $buttonWidth) {
+    text-decoration: none;
+    color: $textColor;
+    background-color: $background;
+    border-radius: 5px;
+    display: block;
+    width: $buttonWidth;
+    margin: auto;
+    text-align: center;
+    box-shadow: 2px 2px 2px black;
+}
 .container{
     width: 90%;
     margin: auto;
@@ -38,5 +55,18 @@ $myColor : #4e4e4e;
         >p{
             text-align: justify;
         }
+        >a{
+            @include buttonStyle(white, green, 70%)
+        }
+    }
+}
+.anothercontent{
+    a{
+        @include buttonStyle(white, blue, 50%)
+    }
+}
+.lastContent{
+    a{
+        @include buttonStyle(red,  green, 100px);
     }
 }
