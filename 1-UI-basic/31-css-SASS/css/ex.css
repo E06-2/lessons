@@ -1,0 +1,66 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+nav {
+  background-color: gray;
+}
+
+nav ul {
+  width: 70%;
+  height: 35px;
+  margin: auto;
+  list-style-type: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav ul li {
+  float: left;
+  margin: 3px 5px;
+  height: 80%;
+  padding: 1%;
+  background-color: aqua;
+}
+
+nav ul li:hover {
+  background-color: #89aa89;
+  color: seagreen;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.banner {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 100, 0, 0.8)), to(rgba(0, 0, 0, 0.5))), url("https://www.umultirank.org/export/sites/default/.galleries/generic-images/Others/Winter-Calendar/hamburg.jpg_1729758211.jpg");
+  background-image: linear-gradient(rgba(0, 100, 0, 0.8), rgba(0, 0, 0, 0.5)), url("https://www.umultirank.org/export/sites/default/.galleries/generic-images/Others/Winter-Calendar/hamburg.jpg_1729758211.jpg");
+  height: calc(100vh - 35px);
+  position: relative;
+  color: white;
+}
+
+.banner > h1 {
+  width: 50%;
+  height: 25vh;
+  position: absolute;
+  left: 30%;
+  top: 50vh;
+  font-size: 3rem;
+}
+
+.banner > p {
+  position: absolute;
+  height: 5vh;
+  left: 35%;
+  top: calc(100vh - 35px - 25vh);
+  font-size: 1.5rem;
+}
+/*# sourceMappingURL=ex.css.map */
