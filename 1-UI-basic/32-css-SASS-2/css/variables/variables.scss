@@ -1,14 +1,37 @@
 $divWidth:100%;/*70%*/
 $divHeight: 50vh;/*vh*/
+$tablet: 450px;
 // color collection
 $colors:(
     primary: #4f4f4f,
     secodary: lighten(blue, 0%),
     light: white
 );
-@mixin hoverEffect($anyColor) {
+// this mixin designed to accept two arumnets
+@mixin hoverEffect($anyColor, $time) {
     &:hover{
         background-color: lighten($anyColor, 20%);
-        transition: all 2s;
+        transition: all $time;
     }
 }
+// this mixin designed with no parameters, to accept content
+@mixin tablet{
+    @media only screen and(max-width:$tablet) {
+        @content;
+    }
+}
+
+/*
+    General form for mixin
+    @mixin mixinName(argument1, argument2,...., argumentN){
+        selector or attributes
+        @content (when you pass a content in calling back)
+    }
+
+*/
+
+// @media screen and(min-width:500px) {
+//     .father{
+
+//     }
+// }

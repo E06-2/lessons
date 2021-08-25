@@ -1,5 +1,11 @@
 // @import './variables';
 @import './variables/variables';
+// define a master group of attributes to be shared with others
+%sharedAttributes{
+    box-shadow: 5px 5px 5px black;
+    outline: 2px solid yellow;
+}
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -11,18 +17,48 @@
     height: $divHeight;
     border: 1px solid;
     position: relative;
+    // passing two arguments (color and time)
+    @include hoverEffect(map-get($colors,primary), 2000ms);
+    @include tablet{
+        background-color: map-get($colors,light);
+    }
     .child{
         background-color: map-get($colors, secodary);
         width: $divWidth / 2;/* 115px*/
         height: $divHeight / 2;/* 90px*/
         border: 1px solid;
         position: absolute;
-        @include hoverEffect(map-get($colors, secodary));
+        //  1s
+        @include hoverEffect(map-get($colors, secodary), 1s);
         // to use varables inside css function etc(calc)
         // #{variablename}
         top: calc((#{$divHeight} - (#{$divHeight})/2) /2);
         // top: $divHeight / 4;
         left: calc((#{$divWidth} - (#{$divWidth})/2) / 2);
         // left: $divWidth / 4;
+        @include tablet{
+            width: 100%;
+            left:0;
+        }
     }
 }
+
+
+
+.b1{
+    // apply the attributes from sharedAttributes
+    @extend %sharedAttributes;
+    width: 40%;
+    height: 100px;
+    border: 1px solid;
+    display: inline-block;
+    background-color: aqua;
+    // in mixin (arguments or parameters)
+    // this mixin designed to accept no arguments, but accept content {}
+    @include tablet{
+        display: block;
+        width: 100%;
+        background-color: red;
+    }
+}
+

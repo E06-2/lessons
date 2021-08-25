@@ -1,5 +1,19 @@
 /*70%*/
 /*vh*/
+/*
+    General form for mixin
+    @mixin mixinName(argument1, argument2,...., argumentN){
+        selector or attributes
+        @content (when you pass a content in calling back)
+    }
+
+*/
+.b1 {
+  -webkit-box-shadow: 5px 5px 5px black;
+          box-shadow: 5px 5px 5px black;
+  outline: 2px solid yellow;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -12,6 +26,18 @@
   height: 50vh;
   border: 1px solid;
   position: relative;
+}
+
+.father:hover {
+  background-color: #828282;
+  -webkit-transition: all 2000ms;
+  transition: all 2000ms;
+}
+
+@media only screen and (max-width: 450px) {
+  .father {
+    background-color: white;
+  }
 }
 
 .father .child {
@@ -28,7 +54,30 @@
 
 .father .child:hover {
   background-color: #6666ff;
-  -webkit-transition: all 2s;
-  transition: all 2s;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+@media only screen and (max-width: 450px) {
+  .father .child {
+    width: 100%;
+    left: 0;
+  }
+}
+
+.b1 {
+  width: 40%;
+  height: 100px;
+  border: 1px solid;
+  display: inline-block;
+  background-color: aqua;
+}
+
+@media only screen and (max-width: 450px) {
+  .b1 {
+    display: block;
+    width: 100%;
+    background-color: red;
+  }
 }
 /*# sourceMappingURL=style.css.map */
