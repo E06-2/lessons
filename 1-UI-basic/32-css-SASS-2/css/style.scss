@@ -17,6 +17,7 @@
         height: $divHeight / 2;/* 90px*/
         border: 1px solid;
         position: absolute;
+        @include hoverEffect(map-get($colors, secodary));
         // to use varables inside css function etc(calc)
         // #{variablename}
         top: calc((#{$divHeight} - (#{$divHeight})/2) /2);

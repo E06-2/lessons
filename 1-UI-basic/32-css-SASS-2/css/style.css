@@ -15,7 +15,7 @@
 }
 
 .father .child {
-  background-color: #e5f433;
+  background-color: blue;
   width: 50%;
   /* 115px*/
   height: 25vh;
@@ -24,5 +24,11 @@
   position: absolute;
   top: calc((50vh - (50vh)/2) /2);
   left: calc((100% - (100%)/2) / 2);
+}
+
+.father .child:hover {
+  background-color: #6666ff;
+  -webkit-transition: all 2s;
+  transition: all 2s;
 }
 /*# sourceMappingURL=style.css.map */

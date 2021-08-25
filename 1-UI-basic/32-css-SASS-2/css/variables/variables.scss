@@ -3,6 +3,12 @@ $divHeight: 50vh;/*vh*/
 // color collection
 $colors:(
     primary: #4f4f4f,
-    secodary: #e5f433,
+    secodary: lighten(blue, 0%),
     light: white
 );
+@mixin hoverEffect($anyColor) {
+    &:hover{
+        background-color: lighten($anyColor, 20%);
+        transition: all 2s;
+    }
+}
