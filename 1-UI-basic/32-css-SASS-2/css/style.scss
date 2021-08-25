@@ -1,0 +1,27 @@
+// @import './variables';
+@import './variables/variables';
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+.father{
+    // map-get(collectionName, keyword)
+    background-color: map-get($colors,primary);
+    width: $divWidth;
+    height: $divHeight;
+    border: 1px solid;
+    position: relative;
+    .child{
+        background-color: map-get($colors, secodary);
+        width: $divWidth / 2;/* 115px*/
+        height: $divHeight / 2;/* 90px*/
+        border: 1px solid;
+        position: absolute;
+        // to use varables inside css function etc(calc)
+        // #{variablename}
+        top: calc((#{$divHeight} - (#{$divHeight})/2) /2);
+        // top: $divHeight / 4;
+        left: calc((#{$divWidth} - (#{$divWidth})/2) / 2);
+        // left: $divWidth / 4;
+    }
+}

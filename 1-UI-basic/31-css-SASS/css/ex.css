@@ -42,7 +42,7 @@ nav ul li a {
 .banner {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 100, 0, 0.8)), to(rgba(0, 0, 0, 0.5))), url("https://www.umultirank.org/export/sites/default/.galleries/generic-images/Others/Winter-Calendar/hamburg.jpg_1729758211.jpg");
   background-image: linear-gradient(rgba(0, 100, 0, 0.8), rgba(0, 0, 0, 0.5)), url("https://www.umultirank.org/export/sites/default/.galleries/generic-images/Others/Winter-Calendar/hamburg.jpg_1729758211.jpg");
-  height: calc(100vh - 35px);
+  height: calc(100vh - map-get($sizes, navbarHeight));
   position: relative;
   color: white;
 }
@@ -60,7 +60,7 @@ nav ul li a {
   position: absolute;
   height: 5vh;
   left: 35%;
-  top: calc(100vh - 35px - 25vh);
-  font-size: 1.5rem;
+  top: calc(100vh - map-get($sizes, headerFontSize) - map-get($sizes, headerHeigh));
+  font-size: 3rem;
 }
 /*# sourceMappingURL=ex.css.map */
