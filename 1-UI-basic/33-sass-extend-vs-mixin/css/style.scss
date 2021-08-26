@@ -1,0 +1,30 @@
+@mixin btnSize($size) {
+    // *, +, /, -
+    padding: $size * 10px;
+}
+.btn{
+    display: inline-block;
+    padding: 10px;
+    background-color: red;
+    // remove underline 
+    // add hover effect
+    text-decoration: none;
+    &:hover{
+        background-color:gray;
+        transform: scale(1.2)
+    }
+}
+
+.btn-lg{
+    @extend .btn;
+    @include btnSize(2);
+}
+.btn-md{
+    @extend .btn;
+    @include btnSize(1.5);
+}
+.btn-sm{
+    @extend .btn;
+    @include btnSize(0.75);
+}
+

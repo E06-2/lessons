@@ -1,0 +1,25 @@
+.btn, .btn-lg, .btn-md, .btn-sm {
+  display: inline-block;
+  padding: 10px;
+  background-color: red;
+  text-decoration: none;
+}
+
+.btn:hover, .btn-lg:hover, .btn-md:hover, .btn-sm:hover {
+  background-color: gray;
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+}
+
+.btn-lg {
+  padding: 20px;
+}
+
+.btn-md {
+  padding: 15px;
+}
+
+.btn-sm {
+  padding: 7.5px;
+}
+/*# sourceMappingURL=style.css.map */
