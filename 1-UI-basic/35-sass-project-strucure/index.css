@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+}
+
+.btn:hover {
+  -webkit-box-shadow: 0.5rem 0.5rem 0.5rem #a59b9b;
+          box-shadow: 0.5rem 0.5rem 0.5rem #a59b9b;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,16 +1,23 @@
-$shape: "bla";
+// $shape: "bla";
+@mixin  shape($par) {
+    @if $par == "circle" {
+        clip-path: circle(50%);
+    } 
 
+    @if $par == "star"{
+        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    }
+}
 .border{
     border: 1px solid black;
     width: 200px;
     height: 200px;
     background-color: aqua;
 
-    @if $shape == "circle" {
-        clip-path: circle(50%);
-    } @else {
-        clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-    } 
-
-
+}
+.border-circle{
+    @include shape("circle")
+}
+.border-star{
+    @include shape("star")
 }
