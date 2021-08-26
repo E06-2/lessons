@@ -1,3 +1,26 @@
+@mixin btnSize($size) {
+    @if $size == 'xs' {
+        padding: .2rem;
+        font-size:1.2rem;
+    }
+    @if $size == 'sm' {
+        padding: .5rem;
+        font-size:1.6rem;
+    }
+    @if $size == 'md' {
+        padding: 1rem;
+        font-size:2.5rem;
+    }
+    @if $size == 'lg' {
+        padding: 1.5rem;
+        font-size:3rem;
+    }
+    @if $size == 'xg' {
+        padding: 2rem;
+        font-size:4rem;
+    }
+}
+
 .btn{
     display: inline-block;
     text-decoration: none;
@@ -11,22 +34,27 @@
 // create mixin called btnSize take button size 
 // as a parameter and return padding and font size properties
 .btn-xs{
+    @include btnSize('xs');
     // padding 2px
     //font-size 12px 
 }
 .btn-sm{
+    @include btnSize('sm');
     // padding 5px 
     //font-size 16px 
 }
 .btn-md{
+    @include btnSize('md');
     // padding 10px 
     //font-size 25px 
 }
 .btn-lg{
+    @include btnSize('lg');
     // padding 15px 
     //font-size 30px 
 }
 .btn-xg{
+    @include btnSize('xg');
     // padding 20px 
     //font-size 40px 
 }
