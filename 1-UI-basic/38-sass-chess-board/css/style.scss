@@ -1,0 +1,43 @@
+.container{
+    display: grid;
+    grid-template-columns: repeat(8, 12.5vw);
+    grid-template-rows: repeat(8, 12.5vw);
+
+    $switcher: true;
+    @for $i from 1 through 64{
+         @if $switcher == true  {
+             @if $i % 2 == 0 {
+                 >div:nth-child(#{$i}){
+                     background-color: red;
+                 } 
+             } @else {
+                >div:nth-child(#{$i}){
+                    background-color: black;
+                }   
+            }
+         } @else {
+            @if $i % 2 == 0 {
+                >div:nth-child(#{$i}){
+                    background-color: black;
+                } 
+            } @else {
+               >div:nth-child(#{$i}){
+                   background-color: red;
+               }   
+           }
+         }
+         @if $i % 8 == 0{
+            $switcher: not $switcher ;
+         }
+    }
+    // $sum:1;
+    // @for $x from 1 through 8{
+        
+    //             div:nth-child(#{$sum}){
+    //                 border: 5px solid green;
+                
+            
+    //     }
+    //     $sum: $sum + 9;
+    // }
+}

@@ -1,0 +1,265 @@
+.container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (12.5vw)[8];
+      grid-template-columns: repeat(8, 12.5vw);
+  -ms-grid-rows: (12.5vw)[8];
+      grid-template-rows: repeat(8, 12.5vw);
+}
+
+.container > div:nth-child(1) {
+  background-color: black;
+}
+
+.container > div:nth-child(2) {
+  background-color: red;
+}
+
+.container > div:nth-child(3) {
+  background-color: black;
+}
+
+.container > div:nth-child(4) {
+  background-color: red;
+}
+
+.container > div:nth-child(5) {
+  background-color: black;
+}
+
+.container > div:nth-child(6) {
+  background-color: red;
+}
+
+.container > div:nth-child(7) {
+  background-color: black;
+}
+
+.container > div:nth-child(8) {
+  background-color: red;
+}
+
+.container > div:nth-child(9) {
+  background-color: red;
+}
+
+.container > div:nth-child(10) {
+  background-color: black;
+}
+
+.container > div:nth-child(11) {
+  background-color: red;
+}
+
+.container > div:nth-child(12) {
+  background-color: black;
+}
+
+.container > div:nth-child(13) {
+  background-color: red;
+}
+
+.container > div:nth-child(14) {
+  background-color: black;
+}
+
+.container > div:nth-child(15) {
+  background-color: red;
+}
+
+.container > div:nth-child(16) {
+  background-color: black;
+}
+
+.container > div:nth-child(17) {
+  background-color: black;
+}
+
+.container > div:nth-child(18) {
+  background-color: red;
+}
+
+.container > div:nth-child(19) {
+  background-color: black;
+}
+
+.container > div:nth-child(20) {
+  background-color: red;
+}
+
+.container > div:nth-child(21) {
+  background-color: black;
+}
+
+.container > div:nth-child(22) {
+  background-color: red;
+}
+
+.container > div:nth-child(23) {
+  background-color: black;
+}
+
+.container > div:nth-child(24) {
+  background-color: red;
+}
+
+.container > div:nth-child(25) {
+  background-color: red;
+}
+
+.container > div:nth-child(26) {
+  background-color: black;
+}
+
+.container > div:nth-child(27) {
+  background-color: red;
+}
+
+.container > div:nth-child(28) {
+  background-color: black;
+}
+
+.container > div:nth-child(29) {
+  background-color: red;
+}
+
+.container > div:nth-child(30) {
+  background-color: black;
+}
+
+.container > div:nth-child(31) {
+  background-color: red;
+}
+
+.container > div:nth-child(32) {
+  background-color: black;
+}
+
+.container > div:nth-child(33) {
+  background-color: black;
+}
+
+.container > div:nth-child(34) {
+  background-color: red;
+}
+
+.container > div:nth-child(35) {
+  background-color: black;
+}
+
+.container > div:nth-child(36) {
+  background-color: red;
+}
+
+.container > div:nth-child(37) {
+  background-color: black;
+}
+
+.container > div:nth-child(38) {
+  background-color: red;
+}
+
+.container > div:nth-child(39) {
+  background-color: black;
+}
+
+.container > div:nth-child(40) {
+  background-color: red;
+}
+
+.container > div:nth-child(41) {
+  background-color: red;
+}
+
+.container > div:nth-child(42) {
+  background-color: black;
+}
+
+.container > div:nth-child(43) {
+  background-color: red;
+}
+
+.container > div:nth-child(44) {
+  background-color: black;
+}
+
+.container > div:nth-child(45) {
+  background-color: red;
+}
+
+.container > div:nth-child(46) {
+  background-color: black;
+}
+
+.container > div:nth-child(47) {
+  background-color: red;
+}
+
+.container > div:nth-child(48) {
+  background-color: black;
+}
+
+.container > div:nth-child(49) {
+  background-color: black;
+}
+
+.container > div:nth-child(50) {
+  background-color: red;
+}
+
+.container > div:nth-child(51) {
+  background-color: black;
+}
+
+.container > div:nth-child(52) {
+  background-color: red;
+}
+
+.container > div:nth-child(53) {
+  background-color: black;
+}
+
+.container > div:nth-child(54) {
+  background-color: red;
+}
+
+.container > div:nth-child(55) {
+  background-color: black;
+}
+
+.container > div:nth-child(56) {
+  background-color: red;
+}
+
+.container > div:nth-child(57) {
+  background-color: red;
+}
+
+.container > div:nth-child(58) {
+  background-color: black;
+}
+
+.container > div:nth-child(59) {
+  background-color: red;
+}
+
+.container > div:nth-child(60) {
+  background-color: black;
+}
+
+.container > div:nth-child(61) {
+  background-color: red;
+}
+
+.container > div:nth-child(62) {
+  background-color: black;
+}
+
+.container > div:nth-child(63) {
+  background-color: red;
+}
+
+.container > div:nth-child(64) {
+  background-color: black;
+}
+/*# sourceMappingURL=style.css.map */

@@ -15,17 +15,28 @@
 // 1 to 12 => [1, 12[
 // 1 through 12 => [1, 12]
 
-    @for $var from 1 through 12 {
-        > .col-#{$var} {
-            width: 100% / 12 * $var;
-            //case for even col we want to have background color red
-            //for odd cols just replace [==] with [!=]
-            @if $var % 2 == 0{
-                background-color:red;
-            }
-            // end case
+    // @for $var from 1 through 12 {
+    //     > .col-#{$var} {
+    //         width: 100% / 12 * $var;
+    //         //case for even col we want to have background color red
+    //         //for odd cols just replace [==] with [!=]
+    //         @if $var % 2 == 0{
+    //             background-color:red;
+    //         }
+    //         // end case
 
-        }
+    //     }
+    // }
+
+
+    // do the same for loop task using while loop
+    $counter: 1;
+    @while $counter <= 12 {
+             > .col-#{$counter} {
+                    width: 100% / 12 * $counter;
+             }
+             $counter: $counter +1;
+                    
     }
 
     // > .col-1{
