@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+/*Banner section*/
+
+.banner{
+    position: relative;
+    margin: 1rem;
+    height: 80vh;
+    background: linear-gradient(
+        to right bottom
+        , rgba(0, 129, 0, 0.664), transparent) ,url(../imgs/banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 90%;
+    background-position-x: 90%;
+    /*test clip-path with transition*/
+    /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transition: clip-path 1s ; */
+
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+
+}
+
+/* .banner:hover{
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+} */
+
+.blur{
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+
+    transition: opacity 1s;
+}
+
+.menubtn{
+    height: 5rem;
+    width: 5rem;
+    background-color: rgb(179, 194, 49);
+    position: absolute;
+    z-index: 9999;
+    border-radius: 50%;
+    left: 1rem;
+    top: 1rem;
+    box-shadow: -3px -1px 10px rgba(0, 0, 0, 0.657);
+    
+}
+.menubtn > span {
+    display: block;
+    background-color: #000;
+    width: 3rem;
+    height: 2px;
+    position: relative;
+    top: 1.25rem;
+    left: 0.5rem;
+    margin: 0.5rem;
+    transition: transform .5s;
+
+}
+#toggle:checked + .banner > label > .menubtn > span:nth-child(1) {
+    transform: rotate(-45deg);
+    top: 2rem;
+}
+#toggle:checked + .banner > label > .menubtn > span:nth-child(2) {
+    transform: rotate(45deg);
+}
+#toggle:checked + .banner > label > .menubtn > span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 2rem;
+    position: absolute;
+}
+
+.menu{
+    position: absolute;
+    /* background-color: green; */
+    z-index: 9999;
+    /* width: 30%; */
+    
+    height: 50%;
+    top: 25%;
+    left: 35%;
+    list-style: none;
+    backface-visibility: hidden;
+
+    opacity: 0;
+    width: 0;
+    overflow: hidden;
+
+    transition: opacity 1s;
+}
+.menu > li{
+    margin-bottom: 1.5rem;
+}
+
+.menu > li > a{
+    font-size: 3.5rem;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    color: rgb(73, 61, 61);
+    transition: transform 0.2s;
+    
+}
+.menu > li > a:hover{
+    transform: scale(1.5);
+    text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.397);
+}
+
+#toggle{
+    display: none;
+}
+
+/*here are the magic
+selector using pseudo class to show content depending on 
+checkbox status (checked)
+*/
+
+#toggle:checked + .banner > .menu{
+    opacity: 1;
+    width: 30%;
+    overflow: visible;
+}
+
+
+#toggle:checked + .banner > .blur{
+    opacity: 1;
+}
+
+/*Banner section end*/
+
+/*Team Section Start*/
+
+.team{
+    display: flex;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.card > img{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33.33%;
+    margin: 2rem;
+    border: .1rem solid gray;
+    padding: 1rem;
+}
+
+.card > h2{
+    font-size: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.card > h4{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: gray;
+}
+
+.card > p{
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.card ul{
+    display: flex;
+    list-style: none;
+}
+.card > ul > li{
+    margin: 0.5rem;
+    font-size: 2rem;
+    color: gray;
+}
+.card > ul > li > a{
+    color: gray;
+}
+
+.card > ul > li:nth-child(1) > a:hover{
+    color: blue;
+}
+.card > ul > li:nth-child(2) > a:hover{
+    color: skyblue;
+}
+.card > ul > li:nth-child(3) > a:hover{
+    color: red;
+}
+.card > ul > li:nth-child(4) > a:hover{
+    color: rgb(66, 66, 241);
+}
+
+@media screen and (max-width: 800px) {
+    .team {
+        flex-direction: column;
+    }
+    .card{
+        width: 100%;
+    }
+    .card > img {
+        width: 30vw;
+        height: 30vw;
+    }
+}
+
+
+/*Team Section end*/
