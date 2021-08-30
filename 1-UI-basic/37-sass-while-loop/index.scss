@@ -1,0 +1,10 @@
+$counter: 1;
+
+@while $counter <= 20 {
+    div:nth-child(#{$counter}){
+        color: lighten(red, $counter * 5%);
+    }
+
+    $counter: $counter +1;
+
+}

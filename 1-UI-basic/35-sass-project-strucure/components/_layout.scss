@@ -1,0 +1,68 @@
+
+
+
+// col-1 (100 / 12) * 1
+// col-2 (100 / 12) * 2
+// col-3 (100 / 12) * 3
+// ......12
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+// number after [to] in for loop is NOT included
+// we can use [through] instead of [to] to include the number after
+// 1 to 12 => [1, 12[
+// 1 through 12 => [1, 12]
+
+    @for $var from 1 through 12 {
+        > .col-#{$var} {
+            width: 100% / 12 * $var;
+            //case for even col we want to have background color red
+            //for odd cols just replace [==] with [!=]
+            @if $var % 2 == 0{
+                background-color:red;
+            }
+            // end case
+
+        }
+    }
+
+    // > .col-1{
+    //     width: 8.333333333%;
+    // }
+    // > .col-2{
+    //     width: 16.666666667%;
+    // }
+    // > .col-3{
+    //     width: 25%;
+    // }
+    // > .col-4{
+    //     width: 33.333333333%;
+    // }
+    // >.col-5{
+    //     width: 41.666666667%;
+    // }
+    // >.col-6{
+    //     width: 50%;
+    // }
+    // >.col-7{
+    //     width: 58.333333331%;
+    // }
+    // >.col-8{
+    //     width: 66.666666664%;
+    // }
+    // >.col-9{
+    //     width: 74.999999997%;
+    // }
+    // >.col-10{
+    //     width: 83.33333333%;
+    // }
+    // >.col-11{
+    //     width: 91.666666663%;
+    // }
+    // >.col-12{
+    //     width: 99.999999996%;
+    // }
+
+}
