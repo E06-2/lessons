@@ -1,0 +1,39 @@
+
+// basic for loop usage
+
+// @for $var from 1 to 6 {
+
+//     li:nth-child(#{$var}){
+//         color: red;
+//     }
+    
+// }
+
+// basic for loop usage end
+
+$color: black;
+
+.container{
+    > div{
+       height: 20px; 
+
+    //    &:nth-child(1){
+    //        background-color: lighten($color, 10%)
+    //    }
+    //    &:nth-child(2){
+    //     background-color: lighten($color, 50%)
+    //     }
+
+        @for $var from 1 to 21 {
+
+            &:nth-child(#{$var}){
+                //left: $var * 5%;
+                background-color: lighten($color, $var * 5%);
+            }
+
+        }
+    }
+
+
+
+}
