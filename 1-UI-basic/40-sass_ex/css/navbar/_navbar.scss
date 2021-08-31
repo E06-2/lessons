@@ -12,14 +12,17 @@
     9- lists border 1px white solid
     mixin(borderStyle)
     10- apply borderStyle to make nav border-radius 5px only
+    11- border for each <li> 1px #e2e2e2 5px
+    12- the text inside li also in center with color #e2e2e2
+    13- create a general hover mixin, taks color as argument, background lighten 20%, takes time argument transition, call it back for li
 */
 @import '../variables/variables';
 $navHeight: 15vh;
-$navBackgroud: #2e2e2e;
+$navBackground: #2e2e2e;
 
 nav{/*div*/
     height: $navHeight;
-    background-color: $navBackgroud;
+    background-color: $navBackground;
     @include borderStyle(0px, white, 5px);
     a{/*all <a>*/
         text-decoration: none;
@@ -29,12 +32,28 @@ nav{/*div*/
         float: left;
         height: 100%;
         @include borderStyle(0.5px, yellow, 0px);
+        @include hoverEffect($navBackground, 1s){
+            // border: 1px solid red;
+            @include borderStyle(5px, red, 10px);
+        };
+
         // text-transform: uppercase;
         >a{
             // text-decoration: underline;
+            display: block;
+            height: 100%;
+
             >h2{
+                width: 90%;
+                height: 100%;
                 text-transform: uppercase;
-                font-size: 1.3rem;
+                font-size: $navHeight/4;
+                text-align: center;
+                color: #e2e2e2;
+                margin: 0 auto;
+                padding: 10%;
+
+
             }
         }
     }
@@ -49,6 +68,18 @@ nav{/*div*/
             margin: 0;
             li{
                 display: inline-block;/*so we can adjust heght*/
+                @include borderStyle(1px, #e2e2e2, 5px);
+                height:  $navHeight/2;
+                margin-top: $navHeight/4;
+                margin-bottom: $navHeight/4;
+                @include hoverEffect($navBackground, 1s);
+                a{
+                    display: block;
+                    height: 100%;
+                    padding-top: $navHeight/10;
+                    font-size: $navHeight/4;
+                    color: #e2e2e2;
+                }
             }
         }
     }

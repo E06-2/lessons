@@ -2,3 +2,11 @@
     border:$borderthick solid $borderColor;
     border-radius: $radius;
 }
+
+@mixin hoverEffect($color, $time) {
+    &:hover{
+        background-color: lighten($color, 20%);
+        transition: all $time;
+        @content;
+    }
+}

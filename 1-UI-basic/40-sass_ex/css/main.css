@@ -10,6 +10,9 @@
     9- lists border 1px white solid
     mixin(borderStyle)
     10- apply borderStyle to make nav border-radius 5px only
+    11- border for each <li> 1px #e2e2e2 5px
+    12- the text inside li also in center with color #e2e2e2
+    13- create a general hover mixin, taks color as argument, background lighten 20%, takes time argument transition, call it back for li
 */
 nav {
   /*div*/
@@ -33,9 +36,28 @@ nav > .logo {
   border-radius: 0px;
 }
 
+nav > .logo:hover {
+  background-color: #616161;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  border: 5px solid red;
+  border-radius: 10px;
+}
+
+nav > .logo > a {
+  display: block;
+  height: 100%;
+}
+
 nav > .logo > a > h2 {
+  width: 90%;
+  height: 100%;
   text-transform: uppercase;
-  font-size: 1.3rem;
+  font-size: 3.75vh;
+  text-align: center;
+  color: #e2e2e2;
+  margin: 0 auto;
+  padding: 10%;
 }
 
 nav > .nav {
@@ -56,6 +78,25 @@ nav > .nav ul {
 nav > .nav ul li {
   display: inline-block;
   /*so we can adjust heght*/
+  border: 1px solid #e2e2e2;
+  border-radius: 5px;
+  height: 7.5vh;
+  margin-top: 3.75vh;
+  margin-bottom: 3.75vh;
+}
+
+nav > .nav ul li:hover {
+  background-color: #616161;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+nav > .nav ul li a {
+  display: block;
+  height: 100%;
+  padding-top: 1.5vh;
+  font-size: 3.75vh;
+  color: #e2e2e2;
 }
 
 * {
