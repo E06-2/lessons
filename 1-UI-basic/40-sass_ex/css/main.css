@@ -1,0 +1,62 @@
+/* 1- logo width: 25%
+      uppercase
+    2- .nav width 75%
+    3- make (.logo &.nav) inline
+    4- override the default display for ul
+    5- display each li in same line
+    6- disable underline fo all elements in nav
+    7- set background #2e2e2e
+    8- logo border: 0.5px yellow solid
+    9- lists border 1px white solid
+    mixin(borderStyle)
+*/
+nav {
+  /*div*/
+  height: 15vh;
+  background-color: #2e2e2e;
+}
+
+nav a {
+  /*all <a>*/
+  text-decoration: none;
+}
+
+nav > .logo {
+  /*div*/
+  width: 25%;
+  float: left;
+  border: 0.5px solid yellow;
+  border-radius: 5px;
+}
+
+nav > .logo > a > h2 {
+  text-transform: uppercase;
+  font-size: 1.3rem;
+}
+
+nav > .nav {
+  /*div*/
+  width: 75%;
+  float: right;
+}
+
+nav > .nav ul {
+  list-style-type: none;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+nav > .nav ul li {
+  display: inline-block;
+  /*so we can adjust heght*/
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+/*# sourceMappingURL=main.css.map */

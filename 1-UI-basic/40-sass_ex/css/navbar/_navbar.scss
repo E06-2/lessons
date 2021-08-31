@@ -1,0 +1,50 @@
+// to open options section in vs code ctrl + shift + p
+// everything about navbar
+/* 1- logo width: 25%
+      uppercase
+    2- .nav width 75%
+    3- make (.logo &.nav) inline
+    4- override the default display for ul
+    5- display each li in same line
+    6- disable underline fo all elements in nav
+    7- set background #2e2e2e
+    8- logo border: 0.5px yellow solid
+    9- lists border 1px white solid
+    mixin(borderStyle)
+*/
+@import '../variables/variables';
+$navHeight: 15vh;
+$navBackgroud: #2e2e2e;
+
+nav{/*div*/
+    height: $navHeight;
+    background-color: $navBackgroud;
+    a{/*all <a>*/
+        text-decoration: none;
+    }
+    >.logo{/*div*/
+        width: 25%;
+        float: left;
+        @include borderStyle(0.5px, yellow, 5px);
+        // text-transform: uppercase;
+        >a{
+            // text-decoration: underline;
+            >h2{
+                text-transform: uppercase;
+                font-size: 1.3rem;
+            }
+        }
+    }
+    >.nav{/*div*/
+        width: 75%;
+        float: right;
+        ul{
+            list-style-type: none;
+            @include borderStyle(1px, white, 5px);
+            li{
+                display: inline-block;/*so we can adjust heght*/
+            }
+        }
+    }
+
+}

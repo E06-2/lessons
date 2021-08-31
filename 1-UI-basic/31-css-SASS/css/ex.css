@@ -44,6 +44,8 @@ nav ul li a {
   background-image: linear-gradient(rgba(0, 100, 0, 0.8), rgba(0, 0, 0, 0.5)), url("https://www.umultirank.org/export/sites/default/.galleries/generic-images/Others/Winter-Calendar/hamburg.jpg_1729758211.jpg");
   height: 100vh;
   position: relative;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 84%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 84%, 0% 100%);
   color: white;
 }
 
