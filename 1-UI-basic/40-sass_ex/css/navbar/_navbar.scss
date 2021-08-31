@@ -11,6 +11,7 @@
     8- logo border: 0.5px yellow solid
     9- lists border 1px white solid
     mixin(borderStyle)
+    10- apply borderStyle to make nav border-radius 5px only
 */
 @import '../variables/variables';
 $navHeight: 15vh;
@@ -19,13 +20,15 @@ $navBackgroud: #2e2e2e;
 nav{/*div*/
     height: $navHeight;
     background-color: $navBackgroud;
+    @include borderStyle(0px, white, 5px);
     a{/*all <a>*/
         text-decoration: none;
     }
     >.logo{/*div*/
         width: 25%;
         float: left;
-        @include borderStyle(0.5px, yellow, 5px);
+        height: 100%;
+        @include borderStyle(0.5px, yellow, 0px);
         // text-transform: uppercase;
         >a{
             // text-decoration: underline;
@@ -38,9 +41,12 @@ nav{/*div*/
     >.nav{/*div*/
         width: 75%;
         float: right;
+        height: 100%;
         ul{
             list-style-type: none;
+            height: 100%;
             @include borderStyle(1px, white, 5px);
+            margin: 0;
             li{
                 display: inline-block;/*so we can adjust heght*/
             }
