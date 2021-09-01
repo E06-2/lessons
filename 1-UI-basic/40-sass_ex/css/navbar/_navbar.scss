@@ -24,6 +24,9 @@ nav{/*div*/
     height: $navHeight;
     background-color: $navBackground;
     @include borderStyle(0px, white, 5px);
+    @include resizing(50px, 840px){
+        height: $navHeight * 2;
+    }
     a{/*all <a>*/
         text-decoration: none;
     }
@@ -36,18 +39,15 @@ nav{/*div*/
             // border: 1px solid red;
             @include borderStyle(5px, red, 10px);
         };
-        @include resizing(){
-            // background-color: tomato;
+        @include resizing(50px, 840px){
             float: none;
             width: 90%;
+            height: 50%;
             margin: auto;
         }
-        // text-transform: uppercase;
         >a{
-            // text-decoration: underline;
             display: block;
             height: 100%;
-
             >h2{
                 width: 90%;
                 height: 100%;
@@ -57,7 +57,7 @@ nav{/*div*/
                 color: #e2e2e2;
                 margin: 0 auto;
                 padding: 10%;
-                @include resizing(){
+                @include resizing(210px, 840px){
                     padding: 5%;
                 };
 
@@ -68,15 +68,30 @@ nav{/*div*/
         width: 75%;
         float: right;
         height: 100%;
-        @include resizing(){
-            // background-color: tomato;
+        @include resizing(50px, 840px){
             float: none;
+            height: 50%;
+            width: 100%;
         }
         ul{
             list-style-type: none;
             height: 100%;
             @include borderStyle(1px, white, 5px);
             margin: 0;
+            @include resizing(800px, 840px){
+                width: 50%;
+                margin: auto;
+                padding: 2%;
+            };
+            @include resizing(638px,800px){
+                width: 90%;
+                margin: auto;
+                padding: 10px 15% ;
+            }
+            @include resizing(50px,638px){
+                width: 100%;
+                padding: 10px 5% ;
+            }
             li{
                 display: inline-block;/*so we can adjust heght*/
                 @include borderStyle(1px, #e2e2e2, 5px);
@@ -84,9 +99,9 @@ nav{/*div*/
                 margin-top: $navHeight/4;
                 margin-bottom: $navHeight/4;
                 @include hoverEffect($navBackground, 1s);
-                @include resizing(){
-                    // background-color: aqua;
-                };
+                // @include resizing(){
+                //     // background-color: aqua;
+                // };
                 a{
                     display: block;
                     height: 100%;

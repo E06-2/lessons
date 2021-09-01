@@ -14,12 +14,21 @@
     12- the text inside li also in center with color #e2e2e2
     13- create a general hover mixin, taks color as argument, background lighten 20%, takes time argument transition, call it back for li
 */
+/*
+this mixin is flexible, we can use multible screen sizing
+*/
 nav {
   /*div*/
   height: 15vh;
   background-color: #2e2e2e;
   border: 0px solid white;
   border-radius: 5px;
+}
+
+@media only screen and (max-width: 840px) and (min-width: 50px) {
+  nav {
+    height: 30vh;
+  }
 }
 
 nav a {
@@ -44,10 +53,11 @@ nav > .logo:hover {
   border-radius: 10px;
 }
 
-@media only screen and (max-width: 840px) {
+@media only screen and (max-width: 840px) and (min-width: 50px) {
   nav > .logo {
     float: none;
     width: 90%;
+    height: 50%;
     margin: auto;
   }
 }
@@ -68,7 +78,7 @@ nav > .logo > a > h2 {
   padding: 10%;
 }
 
-@media only screen and (max-width: 840px) {
+@media only screen and (max-width: 840px) and (min-width: 210px) {
   nav > .logo > a > h2 {
     padding: 5%;
   }
@@ -81,9 +91,11 @@ nav > .nav {
   height: 100%;
 }
 
-@media only screen and (max-width: 840px) {
+@media only screen and (max-width: 840px) and (min-width: 50px) {
   nav > .nav {
     float: none;
+    height: 50%;
+    width: 100%;
   }
 }
 
@@ -93,6 +105,29 @@ nav > .nav ul {
   border: 1px solid white;
   border-radius: 5px;
   margin: 0;
+}
+
+@media only screen and (max-width: 840px) and (min-width: 800px) {
+  nav > .nav ul {
+    width: 50%;
+    margin: auto;
+    padding: 2%;
+  }
+}
+
+@media only screen and (max-width: 800px) and (min-width: 638px) {
+  nav > .nav ul {
+    width: 90%;
+    margin: auto;
+    padding: 10px 15%;
+  }
+}
+
+@media only screen and (max-width: 638px) and (min-width: 50px) {
+  nav > .nav ul {
+    width: 100%;
+    padding: 10px 5%;
+  }
 }
 
 nav > .nav ul li {

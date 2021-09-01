@@ -11,9 +11,16 @@ $smallScreen: 840px;
         @content;
     }
 }
-
-@mixin resizing(){
-    @media only screen and(max-width: $smallScreen) {
+/*
+this mixin is flexible, we can use multible screen sizing
+*/
+@mixin resizing($min, $max){
+    @media only screen and(max-width: $max) and (min-width: $min) {
         @content;
     }
 }
+// @media only screen and(max-width:800px) and (min-width:500px) {
+//     h1{
+
+//     }
+// }
