@@ -37,7 +37,10 @@ nav{/*div*/
             @include borderStyle(5px, red, 10px);
         };
         @include resizing(){
-            background-color: tomato;
+            // background-color: tomato;
+            float: none;
+            width: 90%;
+            margin: auto;
         }
         // text-transform: uppercase;
         >a{
@@ -54,7 +57,9 @@ nav{/*div*/
                 color: #e2e2e2;
                 margin: 0 auto;
                 padding: 10%;
-
+                @include resizing(){
+                    padding: 5%;
+                };
 
             }
         }
@@ -63,6 +68,10 @@ nav{/*div*/
         width: 75%;
         float: right;
         height: 100%;
+        @include resizing(){
+            // background-color: tomato;
+            float: none;
+        }
         ul{
             list-style-type: none;
             height: 100%;
@@ -76,7 +85,7 @@ nav{/*div*/
                 margin-bottom: $navHeight/4;
                 @include hoverEffect($navBackground, 1s);
                 @include resizing(){
-                    background-color: aqua;
+                    // background-color: aqua;
                 };
                 a{
                     display: block;
