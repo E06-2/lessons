@@ -150,15 +150,31 @@ checkbox status (checked)
     border-radius: 50%;
     
 }
-.card{
+.card, .card-back{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 33.33%;
+    /* width: 33.33%; */
     margin: 2rem;
     border: .1rem solid gray;
     padding: 1rem;
+    min-height: 31rem;
+    backface-visibility: hidden;
 }
+
+/*card flip solution start */
+.card-main{
+    width: 33.33%;
+    position: relative;
+}
+.card-back{
+    transform: rotateY(180deg);
+    position: absolute;
+    left: 0;
+    top: 0;
+    
+}
+/*card flip solution end*/
 
 .card > h2{
     font-size: 2rem;
@@ -207,7 +223,7 @@ checkbox status (checked)
     .team {
         flex-direction: column;
     }
-    .card{
+    .card-main{
         width: 100%;
     }
     .card > img {
