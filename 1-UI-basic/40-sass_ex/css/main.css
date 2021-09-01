@@ -44,6 +44,12 @@ nav > .logo:hover {
   border-radius: 10px;
 }
 
+@media only screen and (max-width: 840px) {
+  nav > .logo {
+    background-color: tomato;
+  }
+}
+
 nav > .logo > a {
   display: block;
   height: 100%;
@@ -89,6 +95,12 @@ nav > .nav ul li:hover {
   background-color: #616161;
   -webkit-transition: all 1s;
   transition: all 1s;
+}
+
+@media only screen and (max-width: 840px) {
+  nav > .nav ul li {
+    background-color: aqua;
+  }
 }
 
 nav > .nav ul li a {

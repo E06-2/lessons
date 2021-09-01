@@ -36,7 +36,9 @@ nav{/*div*/
             // border: 1px solid red;
             @include borderStyle(5px, red, 10px);
         };
-
+        @include resizing(){
+            background-color: tomato;
+        }
         // text-transform: uppercase;
         >a{
             // text-decoration: underline;
@@ -73,6 +75,9 @@ nav{/*div*/
                 margin-top: $navHeight/4;
                 margin-bottom: $navHeight/4;
                 @include hoverEffect($navBackground, 1s);
+                @include resizing(){
+                    background-color: aqua;
+                };
                 a{
                     display: block;
                     height: 100%;

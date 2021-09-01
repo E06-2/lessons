@@ -1,3 +1,4 @@
+$smallScreen: 840px;
 @mixin borderStyle($borderthick, $borderColor, $radius) {
     border:$borderthick solid $borderColor;
     border-radius: $radius;
@@ -7,6 +8,12 @@
     &:hover{
         background-color: lighten($color, 20%);
         transition: all $time;
+        @content;
+    }
+}
+
+@mixin resizing(){
+    @media only screen and(max-width: $smallScreen) {
         @content;
     }
 }
