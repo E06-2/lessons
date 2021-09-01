@@ -160,19 +160,27 @@ checkbox status (checked)
     padding: 1rem;
     min-height: 31rem;
     backface-visibility: hidden;
+    transition: transform .5s;
 }
 
 /*card flip solution start */
 .card-main{
     width: 33.33%;
     position: relative;
+    perspective: 1000px;
 }
 .card-back{
-    transform: rotateY(180deg);
+    transform:  rotateY(180deg);
     position: absolute;
     left: 0;
     top: 0;
     
+}
+.card-main:hover > .card{
+    transform:  rotateY(180deg);
+}
+.card-main:hover > .card-back{
+    transform:  rotateY(360deg);
 }
 /*card flip solution end*/
 
