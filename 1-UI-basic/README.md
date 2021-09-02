@@ -11,4 +11,4 @@ apply what we have learned on UIB on the project.
 6. Extra: some Idea or new design that makes your website unique.
 7. Time management: project time and presentation time.
 
-
+![Image of Yaktocat](./39-exercise/imgs/banner.jpg)
