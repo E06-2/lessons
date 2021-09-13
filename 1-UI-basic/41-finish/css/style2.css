@@ -1,0 +1,28 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    background: radial-gradient(aqua, lightblue, darkblue);
+    height:100vh;
+    /*make image on the middle horizontally and vertically*/
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /*solution done*/
+}
+.container img{
+    width:200px;
+    height: 400px;
+    object-fit: contain;
+    /*make image on the middle horizontally*/
+
+    /* display: block;
+    margin: auto; */
+
+    /*solution done*/
+    -webkit-box-reflect: below 5px linear-gradient(to bottom,rgba(0, 0, 0, 0.212), rgba(0, 0, 0, 0.801));
+}
