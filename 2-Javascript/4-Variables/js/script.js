@@ -62,13 +62,28 @@ console.log(x)// 14
 // increment(++)
 // x = x + 1
 // increment +1
-x ++;
-x ++;
+x ++;// x = x + 1
+// ++x
+x ++;// 16
 console.log(x)//=>16
 // increment with a specific value (variable += value)
 x += 20
 console.log(x)//=>36
-
-
-
-
+var y = 1
+y --// y = y - 1
+console.log("y=",y)//0
+y += 40//40
+y -= 10// y = y - 10
+console.log("y=",y)
+var z = 2;
+console.log("z=", z);
+z *= 2// z = z * 2
+console.log("z=", z);// 4
+z *= 10// z = z * 10
+console.log("z=", z);
+z *= z// z = z *z
+console.log("z=", z)
+var w = 10
+console.log("w=", w)
+w /= 2// w = w / 2
+console.log("w=", w)
