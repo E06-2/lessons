@@ -84,7 +84,10 @@ count++;
 // OR ||
 
 var y = (2 !== 2 || 3 < 2);
-console.log(y);
-
-
+//console.log(y);
 //!
+
+//Automatic type conversion.
+console.log(2 + 2 + "2"); // "42"
+
+console.log("2" - 2); // 
