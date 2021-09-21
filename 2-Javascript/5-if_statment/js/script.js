@@ -45,3 +45,22 @@ if(goodSignal){
 }else{
     console.log("we have got a bad signal")
 }
+// enter data to javascript
+// prompt("message")
+// var input = prompt("Please Enter your Name")
+// // always prompt returns a string
+// console.log("type of input is:", typeof input)
+// console.log(input)
+
+// school [6, 18]  [28, 50]
+var age = prompt("Please Enter your age:")
+console.log(age)
+// allow to enter: (the age more or equal  6 and less than or equal 18) or (the age more than equal 28 and less equal than 50)
+if((age >= 6 && age <= 18)||(age >= 28 && age <= 50)){
+// allwo to enter
+console.log("You are allowed to enter")
+}else{
+// all other cases blocked
+console.log("You are not allowed ton enter")
+}
+
