@@ -82,12 +82,12 @@
 // **
 // *
 
-for(let i = 10; i >= 1; i--) {
-    for(let x = 0; x < i; x++){
-        document.write('*');
-    }
-    document.write('<br>');
-}
+// for(let i = 10; i >= 1; i--) {
+//     for(let x = 0; x < i; x++){
+//         document.write('*');
+//     }
+//     document.write('<br>');
+// }
 
 // task: write code to print the following pattern:
 
@@ -101,3 +101,26 @@ for(let i = 10; i >= 1; i--) {
 // --********
 // -*********
 // **********
+
+for(let i = 0; i < 10; i++){
+    for(let x = 10 - i; x > 1; x--){
+        document.write('&nbsp; ');
+    }
+    for(x = 0; x <= i; x++) {
+        document.write('*');
+    }
+    document.write('<br>')
+}
+
+
+// home work
+// task1: write code to find the sum number of numbers between 1 --> 100
+// task2: write a program to print the multiple table from 1 to 100
+// 1 X 1 = 1
+// 1 X 2 = 2
+//- - -
+// 1 X 10 = 10
+// 2 X 1 = 2
+// 2 X 2 = 4
+
+// 10 X 10 = 100
