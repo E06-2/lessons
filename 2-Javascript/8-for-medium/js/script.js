@@ -102,15 +102,15 @@
 // -*********
 // **********
 
-for(let i = 0; i < 10; i++){
-    for(let x = 10 - i; x > 1; x--){
-        document.write('&nbsp; ');
-    }
-    for(x = 0; x <= i; x++) {
-        document.write('*');
-    }
-    document.write('<br>')
-}
+// for(let i = 0; i < 10; i++){
+//     for(let x = 10 - i; x > 1; x--){
+//         document.write('&nbsp; ');
+//     }
+//     for(x = 0; x <= i; x++) {
+//         document.write('*');
+//     }
+//     document.write('<br>')
+// }
 
 
 // home work
@@ -124,3 +124,31 @@ for(let i = 0; i < 10; i++){
 // 2 X 2 = 4
 
 // 10 X 10 = 100
+
+// Task 1: 
+// let storage = 0;
+// for (let i = 1; i <= 100; i++) {
+//     storage += i; // storage = storage + i;
+// }
+// document.write('the sum number is: ' + storage);
+
+// storage = 0
+
+// loop1: i = 1
+// storage = storage + i = 0 + 1 = 1
+
+// loop2: i = 2
+// storage = storage + i = 1 + 2 = 3
+
+// loop3: i = 3
+// storage = storage + i = 3 + 3 = 6
+
+// task2:
+
+for (let i = 1; i <= 10; i++) {
+    for (let j = 1; j <= 10; j++) {
+        //document.write(i + ' x ' + j + ' = ' + (i * j) + '<br>' );
+        document.write(`${i} x ${j} = ${i * j} <br>`);
+    }
+    document.write('<br>');
+}
