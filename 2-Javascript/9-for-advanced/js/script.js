@@ -56,4 +56,27 @@ console.log(arr.length)
 // The Total is: []
 // The Average is: []
 
+// prepare 
+// let x1 = "1.3";
+// let x2 = "2.3";
+// let x3 = Number(x1) + Number(x2);
+// console.log(x3);
+
+let total = 0;
+for (let i = 1; i <= 10; i++) {
+    let num = Number(prompt(`Enter Number ${i}`));
+    // if statement
+    if (isNaN(num)) {
+        num = 0;
+    }
+    total += num; // total = total + num;
+}
+document.write(`The Total is : ${total} <br>`);
+document.write(`The Average is : ${total / 10}`);
+
+// task :  
+// update the previous code so if user entered not a number string then
+// num will be 0
+
+
 
