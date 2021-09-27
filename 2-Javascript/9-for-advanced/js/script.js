@@ -33,11 +33,27 @@ console.log(arr.length)
 
 // write a code using for loop and if statement to find the GREATER number in the arr:
 
-let max = arr[0];
-for (let i = 1; i < arr.length; i++) {
-    if (arr[i] > max) {
-        max = arr[i];
-    }
-}
-document.write(`the max number is : ${max}`);
+// let max = arr[0];
+// for (let i = 1; i < arr.length; i++) {
+//     if (arr[i] > max) {
+//         max = arr[i];
+//     }
+// }
+// document.write(`the max number is : ${max}`);
+
+// task :  
+// write a code to allow user to enter 10 numbers using prompt and
+// then to show the total and the average 
+
+// enter number 1:
+// user will enter some number then click enter
+
+// enter number 2:
+// user will enter some number then click enter
+
+// after entering the last number which is number 10
+// the program should show result like this:
+// The Total is: []
+// The Average is: []
+
 
