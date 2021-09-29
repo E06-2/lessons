@@ -90,3 +90,35 @@
 // }
 // document.write(sum+"<br>")
 
+
+// for(i = 1; i <=6; i++){
+//     document.write(`<h${i}>${i}</h${i}>`)
+// }
+
+/**
+ * h1
+ * h2
+ * ..
+ * h6
+ * h1
+ * h2
+ * ..
+ * 
+ */
+let i = 1
+let h = 1
+while(i<=22){
+    if(h == 3){
+        document.write(`<h${h} style="color: red;">${i}</h${h}>`)
+    }else{
+        document.write(`<h${h}>${i}</h${h}>`)
+    }
+    i++
+    h++
+    if(h >6 ){
+        h = 1
+    }
+    if (i % 4 == 1){
+        document.write(`<hr>`)
+    }
+}
