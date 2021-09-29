@@ -1,6 +1,6 @@
 // x, y to cells, rows
-var rows = 4
-var cells = 4
+var rows = 10
+var cells = 10
 // somthing repeat 3 times: start from 0 == < 3
 // 0    1   2
 // [0, 5] ==> 6
@@ -30,7 +30,7 @@ for(let y = 0; y < rows; y++){// 3
     document.write(`<tr>`)
     // cells area
     for(let x = 0; x < cells; x++){//4
-        if(y == x ){
+        if(x + y == rows - 1  ){
             document.write(`<td style="background:red">`)
         }else{
             document.write(`<td>`)
