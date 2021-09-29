@@ -83,6 +83,7 @@ console.log(arr1[arr1.length -1])// =>2
 // [5,6,9,0,2,3,7,1,2]
 
 let i = 0
+var sum = 0 
 while(i < arr1.length){
     //1- display only even numbers (0, 2, 4, 6, ..., 2n)
     // if(arr1[i] % 2 == 0){
@@ -92,9 +93,12 @@ while(i < arr1.length){
     // if(arr1[i] > 3){
     //     document.write(arr1[i]+ "<br>") 
     // }
+    // sum += i//0+1+2+3+4+5+6+7+8=36
+    sum +=arr1[i]// 5+6+9+0+2+3+7+1+2=35
     i++
 }
 // 3- find the sum of all numbers inside arr1
+document.write(`<br>The sum of all numbers inside arr1 is: ${sum}<br>`)
 console.log(arr1[2*4])//== console.log(arr1[8])
 console.log(arr1[4%3])//== console.log(arr1[1])
 console.log(arr1[9/2])//== console.log(arr1[4.5]) undefined
