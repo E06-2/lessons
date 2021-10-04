@@ -53,3 +53,20 @@ const parties = ['green', 'SPD', 'SPD', 'CDU', 'SPD', 'SPD', '', 'CDU', '', 'CDU
 // Task1:
 // create a new array and fill it with people name that like SPD party then print
 // then print the percentage of them.
+
+const spds = [];
+parties.forEach((element, idx) => {
+    if (element === 'SPD') {
+        spds.push(people[idx]);
+    }
+});
+console.log(spds);
+const percent = spds.length * 100 / people.length;
+console.log(`SPD fans ${percent}%`);
+
+// Task2:
+// how many people are overweight?
+// using BMI method :
+// BMI = weight / height * height  (height in Meter)
+// if BMI is greater than 25 this person considered to be overweight
+// write the code to calculate the percentage of overweight people in our class.
