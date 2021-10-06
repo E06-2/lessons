@@ -123,7 +123,13 @@ console.log("This log is after setTimeout function")
  * setInterval(procedur (function), 1000 ms = 1s)
  */
 let ii = 0
-setInterval(function(){
+const myInterval = setInterval(function(){
     ii++
     console.log(ii)
+    // if(ii>10)
+    //     clearInterval(myInterval)
 }, 1000)
+// clearInterval()
+setTimeout(function(){
+    clearInterval(myInterval)
+}, 10000)

@@ -122,5 +122,40 @@ nArray.splice(pos, 1)
 // nArray.splice(nArray.length -1, 1)//= remove last element
 // nArray.splice(-1, 1)//= remove last element
 let res = nArray.splice(6, 0, 55)
-console.log("RES===>",res)
-console.log(nArray)
+// console.log("RES===>",res)
+// console.log(nArray)
+/**
+ * create a void function removeOdd(array) takes array as an argument, this function will remove all odd numbers from the array, use .forEach instead of for loop
+ */
+
+function removeOdd(array){
+    // let i = 0
+    // array.forEach((element, index)=>{
+    //     if(array[i] % 2 == 1){
+    //         array.splice(i, 1)
+    //         i--
+    //     }
+    //         i++
+    // })
+
+    for(let i = 0; i<array.length;i++){
+        if(array[i] %2 === 1){
+            array.splice(i, 1)
+            i--
+        }
+    }
+}
+let testArray = [0, 1, 3, 4, 5, 6, 55, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18, 19, 20]
+console.log(testArray)
+removeOdd(testArray)
+console.log(testArray)
+//
+/**
+ * 1- Create a function, isPrime(n) n C [0, n],
+ * this function will return true if n is prime number, false other case
+ * 2- another function, generateArrayOfPrime(n) n C [0, n], returns array of prime numbers
+ * n = 100
+ * hint: 
+ *      prime numbers: [2, 3, 5, 7, 11, 13, ...,p]
+ *      you can use isPrime(n) function already you created
+ */
