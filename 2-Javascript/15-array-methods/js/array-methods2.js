@@ -159,3 +159,44 @@ console.log(testArray)
  *      prime numbers: [2, 3, 5, 7, 11, 13, ...,p]
  *      you can use isPrime(n) function already you created
  */
+
+/**
+ * This function will check if n is prime number or not.
+ * @author Mostafa Othman
+ * @param {number} n Positive Natural Number.
+ * @returns {Boolean} true if prime or false if not.
+ */
+function isPrime(n){
+    for(let i = 2; i < n; i++){
+        if(n % i == 0){
+            return false
+        }
+    }
+    return true
+}
+// test isPrime function:
+console.log("is 13 prime?", isPrime(13))
+console.log("is 55 prime?", isPrime(55))
+
+/**
+ * This function will search for all prime numbers between 2 and n
+ * @author Mostafa Othman
+ * @param {number} n Positive Natural Number.
+ * @returns {[number]} array of all prime numbers.
+ */
+function generateArrayOfPrime(n){
+    let primeArray = []
+    for(let i = 2; i <= n; i++){
+        if(isPrime(i)){
+            primeArray.push(i)
+        }
+    }
+    return primeArray
+}
+
+// test generateArrayOfPrime function
+// processing time:
+console.time("process")
+let primeArray = generateArrayOfPrime(100000)
+console.timeEnd("process")// in ms
+console.log(primeArray)
