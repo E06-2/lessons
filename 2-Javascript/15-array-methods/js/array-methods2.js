@@ -70,3 +70,57 @@ console.log(`SPD fans ${percent}%`);
 // BMI = weight / height * height  (height in Meter)
 // if BMI is greater than 25 this person considered to be overweight
 // write the code to calculate the percentage of overweight people in our class.
+/////////////////////////////////////////////
+let myArray = [0,1,2,3]
+// .push(element) add a new elelment to the end of the array
+myArray.push(4)
+myArray.push("String")
+myArray.push(true)
+myArray.push({c:9})
+myArray.push([5,9,10])
+// myArray.push(undefined)
+// array.pop()==> remove the last element
+// myArray.pop()
+// myArray.shift()// remove the first element 
+// myArray.shift()
+myArray.unshift(true)// .unshift(element) add a new elelment to the start of the array
+console.log(myArray)
+/**
+ * create a function generateArray(n), takes one argument (n), returns an array of numbers from [0, 1, 2, ..., n]
+ * display the array in console
+ */
+/**
+ * 
+ * @param {Number} n count of the Elements 
+ * @returns 
+ */
+function generateArray(n){
+    let array = []
+    for (let i = 0; i <= n; i++){
+        array.push(i)
+    }
+    return array
+}
+
+let nArray = generateArray(20)
+// for(let i = 0; i <nArray.length; i++){
+//     console.log(nArray[i])
+// }
+// nArray.forEach(function(element, index){
+//     console.log(index)
+// })
+/**
+ * to remove any between items inside an array, we need to know the position (index) of the element that we want to remove
+ * array.splice(position, count)
+ */
+nArray.splice(2, 1)
+nArray.splice(6, 1)
+let pos = nArray.indexOf(13)
+console.log(pos)
+nArray.splice(pos, 1)
+// nArray.splice(2, 2)
+// nArray.splice(nArray.length -1, 1)//= remove last element
+// nArray.splice(-1, 1)//= remove last element
+let res = nArray.splice(6, 0, 55)
+console.log("RES===>",res)
+console.log(nArray)
