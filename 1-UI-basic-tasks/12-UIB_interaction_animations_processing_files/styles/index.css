@@ -1,0 +1,237 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.page {
+    width: 100%;
+    min-height: 100vh;
+    background-color: rosybrown;
+}
+
+.page-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hide {
+    display: none;
+}
+
+.page:nth-of-type(odd) {
+    background-color: mistyrose;
+}
+
+/* Processing container */
+
+/* @keyframes processing {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+} */
+
+@keyframes appear {
+    0% {
+        transform: scale(0.8) translateX(300%);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    20% {
+        transform: scale(1.2) translateX(0) translateY(-5%);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    50% {
+        transform: scale(1.2) translateX(0) translateY(5%);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    80% {
+        transform: scale(1) translateX(0) translateY(0%);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    100% {
+        transform: scale(0.8) translateX(-300%);
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes appear-and-stay {
+    0% {
+        transform: scale(0.8) translateX(0%) translateY(-300%);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    20% {
+        transform: scale(1) translateX(0) translateY(15%);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    50% {
+        transform: scale(1)  translateX(0) translateY(-15%);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    80% {
+        transform: scale(1) translateX(0) translateY(5%);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    100% {
+        transform: scale(1)  rotate(0deg) translateX(0) translateY(0%);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* 100% {
+        transform: scale(0.8) translateX(-300%);
+        opacity: 0;
+        visibility: hidden;
+    } */
+}
+
+.processing-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+
+    /* border: 1px solid red; */
+
+    overflow: hidden;
+}
+
+
+
+.processing-item {
+    /* flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 100%; */
+
+    /* border: 2px solid blue; */
+
+    position: absolute;
+    /* top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0; */
+    /* margin: auto; */
+    display: flex;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    /* transform: translateY(50%); */
+    /* animation-name: appear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite; */
+
+    --animation-duration: 1s;
+}
+
+.processing-item:nth-child(1) {
+    animation-name: appear;
+    animation-duration: var(--animation-duration);
+    animation-iteration-count: 1;
+}
+
+.processing-item:nth-child(2) {
+    animation-name: appear;
+    animation-duration: var(--animation-duration);
+    animation-iteration-count: 3;
+    animation-delay: calc(var(--animation-duration) * 1);
+}
+
+.processing-item:nth-child(3) {
+
+    /* transform: translate(0); */
+
+    /* visibility: visible;
+    opacity: 1; */
+    animation-name: appear-and-stay;
+    animation-duration: var(--animation-duration);
+    animation-iteration-count: 1;
+    /* animation-delay: 8s; */
+    animation-delay: calc(var(--animation-duration) * 4);
+
+    animation-fill-mode: forwards;
+
+}
+
+.processing-item img {
+    display: block;
+    width: 100px;
+    margin: 0 auto;
+
+}
+
+.processing-label {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+            /* opacity: 0;
+            visibility: hidden;
+*/
+}
+
+.processing-label {
+    /* position: absolute; */
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    display: block;
+    text-align: center;
+}
+
+
+@keyframes blinking-label {
+    0% {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    100% {
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+.processing-label:nth-of-type(1) {
+    /* border: 1px solid red; */
+    animation-name: blinking-label;
+    animation-duration: 1s;
+    animation-iteration-count: 4;
+
+    /* animation-fill-mode: backwards; */
+}
+
+.processing-label:nth-of-type(2) {
+    animation-name: blinking-label;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-delay: 4s;
+
+    animation-fill-mode: forwards;
+}
