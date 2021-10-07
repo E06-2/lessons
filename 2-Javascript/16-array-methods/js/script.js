@@ -95,3 +95,44 @@ let arr2 = weights.map((_, idx) =>
 .filter((_, index) => genders[index] === 'f');
 
 console.log(arr2);
+
+// homework:
+let nestedArr = [
+    [
+        2,
+        3,
+        8,
+        [
+            5,
+            3,
+            8,
+            7
+        ]
+    ],
+    8,
+    5,
+    [
+        2,
+        4,
+        1,
+        [
+            5,
+            4,
+            3,
+            7
+        ]
+    ],
+    [
+        5,
+        4,
+        8,
+        [
+            2,
+            5,
+            8,
+            7
+        ]
+    ]
+];
+
+// write a code to calculate the sum of all numbers and nested numbers in the array
