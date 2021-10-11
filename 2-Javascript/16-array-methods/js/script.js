@@ -136,3 +136,26 @@ let nestedArr = [
 ];
 
 // write a code to calculate the sum of all numbers and nested numbers in the array
+
+const arraySum = arr => {
+    let storage = 0;
+    arr.forEach(element => {
+        if (Array.isArray(element)) {
+            storage += arraySum(element);
+        } else {
+            storage += element;
+        }
+    })
+    return storage;
+}
+console.log(arraySum(nestedArr));
+
+// 5! = 2 * 3 * 4 * 5;
+// sort arr 
+// sort method will sort the array 
+// return a - b will sort the array from smaller to greater number
+//return b - a will sort the array from greater to smaller number
+arr.sort((a, b) => {
+    return b - a;
+})
+console.log(arr);
