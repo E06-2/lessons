@@ -1,0 +1,45 @@
+/* Content Styling */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: cyan; 
+}
+
+#list-item {
+    color: blue;
+}
+
+.image {
+    display: inline;
+}
+.heading {
+    color:rgb(255, 136, 0);
+    font-size: 2em;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+footer a:hover {
+color: green;
+}
+
+footer a:visited {
+    color: red;
+}
+
+/* Box Model */
+.box-model {
+    padding: 5px;
+    margin: 10%;
+}
+
+/* Images & Links */
+.tree-image {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+
