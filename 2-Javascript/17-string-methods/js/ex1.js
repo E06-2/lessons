@@ -41,3 +41,42 @@ letterCounter(original_text)
 let text = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque totam quo harum molestiae placeat necessitatibus, id sed molestias magnam inventore cum! abc@ccc.ccc non deleniti quaerat exercitationem quibusdam voluptates eveniet quos?
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ullam mostafa@dci.org accusantium delectus a@b.c libero, minima deleniti expedita impedit id vitae reiciendis ducimus, ahmad@gmail.com, animi labore? Provident, dolores. Necessitatibus, fugiat!
 Lorem ipsum karim@yahoo.com sit amet consectetur adipisicing elit. Quasi, numquam beatae! Corporis, explicabo? Hic veritatis culpa provident soluta. Repellendus distinctio neque libero voluptas unde sapiente, eos aut voluptatum maiores quis?`
+
+// text = text.replace("@", "...@")
+// console.log(text)
+/**
+ * loop throw the text
+ * search of emails, look for "@"
+ * change first three letters from this email to "."
+ * merge those emails to the text again (in same position)
+ */
+
+function hideEmail(t){
+    // return convertToArray(t)
+    let words = t.split(" ");
+    for(let i = 0; i < words.length; i++){
+        let email = words[i];
+        if(email.includes("@")){
+            console.log(email)
+            let e = email.split("@")
+            let firstPart = e[0]
+            e[0] = firstPart.slice(0, -3) + "..."
+            email = e.join("@")
+            words[i] = email
+        }
+    }
+    //console.log(words)
+    return words.join(" ")
+}
+// hideEmail(text)
+console.log(hideEmail(text))
+// console.log(hideEmail(text))
+// let tx = "mostafa@dci.org"
+// let e = tx.split("@")
+// let firstPart = e[0]
+// e[0] = firstPart.slice(0, -3) + "..."
+// // tx[6] = "." works only with arrays
+// tx = e.join("@")// array to string
+// console.log("First Part ===> ", firstPart)
+// console.log("e ===> ",e)
+// console.log("tx==> ",tx)
