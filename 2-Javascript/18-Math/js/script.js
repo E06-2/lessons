@@ -94,11 +94,12 @@ let verbs = ["wash", "break", "cook", "sell", "draw", "throw", "burn"]
  */
 // console.log(names[randomIntegerNumber])
 // document.write(`${names[randomIntegerNumber]} want to ${verbs[0]} ${names[2]}'s sdf <br>`)
+// console.log(names[names.length -1])
 const funny = x=>{
-    let randomNameIndex1 = Math.floor(Math.random() * names.length)// [0, names length]
-    let randomNameIndex2 = Math.floor(Math.random() * names.length)
-    let randomVerbIndex = Math.floor(Math.random() * verbs.length)// [0, verbs length]
-    let randomPartIndex = Math.floor(Math.random() * parts.length)// [0, parts length]
+    let randomNameIndex1 = generateRandom(0, names.length -1)// [0, names length]
+    let randomNameIndex2 = generateRandom(0, names.length-1)
+    let randomVerbIndex = generateRandom(0, verbs.length-1)// [0, verbs length]
+    let randomPartIndex = generateRandom(0, parts.length-1)// [0, parts length]
     let funnyText = `${names[randomNameIndex1]} want to ${verbs[randomVerbIndex]} ${names[randomNameIndex2]}'s ${parts[randomPartIndex]} :)`
     let r = generateRandom(0, 255)
     let g = generateRandom(0, 255)
