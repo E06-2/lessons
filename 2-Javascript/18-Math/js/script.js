@@ -60,36 +60,54 @@ check if from & to are numbers (integers)
 check if from < to
 ex: generateRandom(5, 50) ==> 25 or 30 or .....
 */
+/**
+ * This function will return a random number between two numbers.
+ * @author Mostafa
+ * @param {Number} from an Integer number
+ * @param {Number} to an Integer number
+ * @returns {Number} random number between from and to, or -1 when "from" or "to" or "from" greater than "to"
+ */
 function generateRandom(from, to){
     // check if 'from & to' are numbers
     // if from is not number or to is not a number break
     if(!Number.isInteger(from) || !Number.isInteger(to)){
-        return "from, to must be numbers"
+        console.log("from, to must be numbers")
+        return -1
     }
     if(from > to){
-        return "from should be greater than to"
+        console.log("from should be greater than to")
+        return -1
     }
-    let r = Math.random()// 0, 0.9999
-    // max number is "to"
-    // min number is "from"
-    // from + r >= from
-    // r * to   < to
-    // 6, 12, 
-    let min = Math.round(r + from)// 7 
-    let max = Math.round(to * r)// 12
-    return (max - min)
+    return Math.round(Math.random() * (to - from) + from)
 }
+console.log("My Random Is: ",generateRandom(0, 20))
+// f(x) = 2x^2 +2 ==> f(2)=10, f(0)
+// f(x) = x/f(x-1) 
 ///////////////////////////////////////////////
 let names = ["Mostafa", "Matteo", "Ahmet", "Asieh", "Denis", "Eddison", "Faden", "Fotis", "Haythem", " Hisham", "Karim", "Lace", "Luca", "Mohamad", "Suhaib", "Ahmad"]
 let parts = ["Head", "eyes", "face", "arm", "Shulder", "Knee"]
 let verbs = ["wash", "break", "cook", "sell", "draw", "throw", "burn"]
 /**
  * function generate a funny sentens like:
- * (Mostafa) want to (sell)  (Ahmet)'s  (Shulder).
+ * (Mostafa) want to (sell)  (Ahmet)'s  (Shulder) :)
  * use random, result in document
  */
-console.log(names[randomIntegerNumber])
-document.write(`${names[randomIntegerNumber]} want to ${verbs[0]} ${names[2]}'s sdf <br>`)
-
+// console.log(names[randomIntegerNumber])
+// document.write(`${names[randomIntegerNumber]} want to ${verbs[0]} ${names[2]}'s sdf <br>`)
+const funny = x=>{
+    let randomNameIndex1 = Math.floor(Math.random() * names.length)// [0, names length]
+    let randomNameIndex2 = Math.floor(Math.random() * names.length)
+    let randomVerbIndex = Math.floor(Math.random() * verbs.length)// [0, verbs length]
+    let randomPartIndex = Math.floor(Math.random() * parts.length)// [0, parts length]
+    let funnyText = `${names[randomNameIndex1]} want to ${verbs[randomVerbIndex]} ${names[randomNameIndex2]}'s ${parts[randomPartIndex]} :)`
+    let r = generateRandom(0, 255)
+    let g = generateRandom(0, 255)
+    let b = generateRandom(0, 255)
+    document.write(`<h2 style="color:rgb(${r},${g},${b})">${x}- ${funnyText}</h2>`)
+}
+for(let i = 1; i <= 100; i++)
+{
+    funny(i)
+}
 
 
