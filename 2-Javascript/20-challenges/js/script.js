@@ -93,5 +93,18 @@ console.log(chars[0][0]);
 
 function encrypt(str) {
     // hello => '10081005101210121015'
+    // return str.toLowerCase().split('')
+    // .map(element => chars.find(elem => elem[0] === element)[1]).join('');
+    const strArr = str.toLowerCase().split('');
+    console.log(strArr);
+    let result = '';
+    strArr.forEach(element => {
+        const key = chars.find(elem => elem[0] === element)
+        console.log(key[1]);
+        result += key[1];
+    })
+    return result;
+
 }
 
+console.log(encrypt('hello'));
