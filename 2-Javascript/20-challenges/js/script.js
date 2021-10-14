@@ -104,7 +104,16 @@ function encrypt(str) {
         result += key[1];
     })
     return result;
-
 }
-
 console.log(encrypt('hello'));
+
+// task for Monday
+function decrypt(text) {
+    // should return the decrypted text
+    // '10081005101210121015' => 'hello'
+}
+// next week
+// setTimeOut , setInterval
+// callbacks, promises, async await
+// oop: objects properties, methods
+// classes: build class inheriting, methods, properties
