@@ -69,7 +69,22 @@ const badWords = ['asshole', 'fuck', 'ass'];
 function badWordsRemover (str) {
  // write a code to return a sentence with replaced 
  // badwords *****
+ const strArr = str.split(' ');
+ const cleanArr = strArr.map(word => {
+     if (badWords.includes( word.toLowerCase())) {
+         // return stars word with same length of the original one 
+         //return word.split('').map(char => "*").join('')
+         return '*'.repeat(word.length);
+     } else {
+         return word;
+     }
+ })
+ const cleanStr = cleanArr.join(' ');
+ return cleanStr;
 }
+
+const inputSentence = prompt('Enter a Sentence');
+document.write(badWordsRemover(inputSentence));
 
 // use prompt as an input 
 
