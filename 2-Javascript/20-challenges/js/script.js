@@ -33,8 +33,8 @@ function humanize(num) {
     if (num % 100 === 11 || num % 100 === 12 || num % 100 === 13) {
         return num + 'th';
     } else {
-        const check = check123(num);
-        switch (check) {
+        // const check = check123(num);
+        switch (num % 10) {
             case 1:
                 return num + 'st';
             case 2:
@@ -48,7 +48,7 @@ function humanize(num) {
     }
 }
 
-console.log(humanize(10511));
+console.log(humanize(1020));
 // 2 => 2nd
     // 23 => 23rd
     // 91 => 91st
@@ -58,3 +58,40 @@ console.log(humanize(10511));
     // 13 => 13th
     // 68 => 68th
     // 62 => 62nd
+
+const chars = [
+    [' ', 1000],
+    ['a', 1001],
+    ['b', 1002],
+    ['c', 1003],
+    ['d', 1004],
+    ['e', 1005],
+    ['f', 1006],
+    ['g', 1007],
+    ['h', 1008],
+    ['i', 1009],
+    ['j', 1010],
+    ['k', 1011],
+    ['l', 1012],
+    ['m', 1013],
+    ['n', 1014],
+    ['o', 1015],
+    ['p', 1016],
+    ['q', 1017],
+    ['r', 1018],
+    ['s', 1019],
+    ['t', 1020],
+    ['u', 1021],
+    ['v', 1022],
+    ['w', 1023],
+    ['x', 1024],
+    ['y', 1025],
+    ['z', 1026],
+];
+
+console.log(chars[0][0]);
+
+function encrypt(str) {
+    // hello => '10081005101210121015'
+}
+
