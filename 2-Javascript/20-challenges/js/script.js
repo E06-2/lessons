@@ -29,12 +29,32 @@ function check123(num) {
 console.log(check123(125)); 
 
 function humanize(num) {
-    // 2 => 2nd
+    
+    if (num % 100 === 11 || num % 100 === 12 || num % 100 === 13) {
+        return num + 'th';
+    } else {
+        const check = check123(num);
+        switch (check) {
+            case 1:
+                return num + 'st';
+            case 2:
+                return num + 'nd';
+            case 3:
+                return num + 'rd';
+        
+            default:
+                return num + 'th';
+        }
+    }
+}
+
+console.log(humanize(10511));
+// 2 => 2nd
     // 23 => 23rd
     // 91 => 91st
     // 25 => 25th
     // 11 => 11th
     // 12 => 12th
+    // 13 => 13th
     // 68 => 68th
     // 62 => 62nd
-}
