@@ -1,4 +1,5 @@
 function print (str) {
+    document.body.innerHTML = '';
     document.write(str);
 }
 
@@ -56,10 +57,26 @@ function print (str) {
 // then when second reaches 59 it should be reset to 00 AND increase minutes by 1
 // then if minutes reaches 59 it should be reset to 00 and increase hours by 1
 
+function format(num) {
+    if (num < 10) {
+        return '0' + num;
+    } else {
+        return num;
+    }
+}
 let seconds = 0;
 let minutes = 0;
 let hours = 0;
 setInterval(() => {
     // your code is here
-
+    print(`${format(hours)}:${format(minutes)}:${format(seconds)}`);
+    seconds++;
+    if (seconds === 60) {
+        seconds = 00;
+        minutes++;
+        if (minutes === 60) {
+            minutes = 0;
+            hours++;
+        }
+    }
 }, 1000)
