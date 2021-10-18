@@ -105,13 +105,26 @@ function encrypt(str) {
     })
     return result;
 }
-console.log(encrypt('hello'));
+//console.log(encrypt('hello'));
 
 // task for Monday
 function decrypt(text) {
     // should return the decrypted text
     // '10081005101210121015' => 'hello'
+    let codeText = '';
+    let result = '';
+    for (let i = 0; i < text.length; i++) {
+        codeText += text[i];
+        if (codeText.length === 4) {
+            //console.log(codeText);
+            const letter = chars.find(element => element[1].toString() === codeText)[0]
+            result += letter;
+            codeText = '';
+        }
+    }
+    return result;
 }
+console.log(decrypt('10081005101210121015'));
 // next week
 // setTimeOut , setInterval
 // callbacks, promises, async await
