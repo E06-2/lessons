@@ -97,6 +97,27 @@ console.log(person1)
  * display all Value 0 to 5 orderd from crazyObject
  */
 
+ const person = {
+    name: "John",
+    lastName: "Smith",
+    age: 30,
+    address: {
+        country:{
+            name:"Germany",
+            city:{
+                name:"Hamburg",
+                street:{
+                    name:"BerlienerStrasse",
+                    builing: 21
+                }
+            }
+        }
+    }
+  }
+    let street = person.address.country.city.street.name
+    console.log("Address for person is: ", street)
+    // Germany-Hamburg-BerlienerStrasse-21
+
 const crazyObject = {
     a:1,
     b:10,
