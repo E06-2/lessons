@@ -96,6 +96,7 @@ console.log(person1)
  * nested Object
  * display all Value 0 to 5 orderd from crazyObject
  */
+
 const crazyObject = {
     a:1,
     b:10,
@@ -122,6 +123,24 @@ const crazyObject = {
         true,
         {
             t:"Value 5"
+        }
+    ]
+}
+console.log(crazyObject.c.h.r[0].v)
+console.log(crazyObject.c.h.r[0].d.f)
+console.log(crazyObject.c.h.r[1])
+console.log(crazyObject.c.h.z)
+console.log(crazyObject.c.k.f)
+console.log(crazyObject.x[1].t)
+let myObj = {
+    a:1,
+    b: "Value 0",
+    c:{
+        v:"Value 1"
+    },
+    d:[
+        {
+            x:"Value 2"
         }
     ]
 }
