@@ -108,14 +108,19 @@ console.log(person1)
                 name:"Hamburg",
                 street:{
                     name:"BerlienerStrasse",
-                    builing: 21
+                    building: 21
                 }
             }
         }
     }
   }
-    let street = person.address.country.city.street.name
-    console.log("Address for person is: ", street)
+  let country = person.address.country.name
+  let city = person.address.country.city.name
+  let street = person.address.country.city.street.name
+  let building = person.address.country.city.street.building
+
+  let fullAddress = `${country}-${city}-${street}-${building}`
+    console.log("Full Address for person is: ", fullAddress)
     // Germany-Hamburg-BerlienerStrasse-21
 
 const crazyObject = {
@@ -147,6 +152,11 @@ const crazyObject = {
         }
     ]
 }
+/**
+ * Optional:
+ * create  function countNumbers(obj:any)
+ * count all numbers inside the object
+ */
 console.log(crazyObject.c.h.r[0].v)
 console.log(crazyObject.c.h.r[0].d.f)
 console.log(crazyObject.c.h.r[1])
