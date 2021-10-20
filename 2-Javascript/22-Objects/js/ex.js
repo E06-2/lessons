@@ -40,10 +40,12 @@ console.log(person2)
  * for(let k in obj) loop for keys (only objects)
  * for (let item of array) loop for all items in (only arrays)
  */
-for (let key in person1){
-    document.write(key + ":" + person1[key]+"<br>")
-    // console.log(key)
-}
+// for (let key in person1){
+//     document.write(key + ":" + person1[key]+"<br>")
+//     // console.log(key)
+// }
+document.write(objectToHTML(person1) + "<hr>")
+
 // let array = [1,5,6,3,2,0]
 // for (let i of array){
 //     console.log(i)
@@ -134,11 +136,17 @@ const crazyObject = {
                 {
                     v:"Value 0",
                     d:{
-                        f:"Value 1"
+                        f:"Value 1",
+                        gg:10
                     }
                 },"Value 2"
             ],
-            z:"Value 3"
+            z:"Value 3",
+            k:{
+                p:{
+                    m:10
+                }
+            }
         },
         k:{
             f:"Value 4"
@@ -175,3 +183,107 @@ let myObj = {
         }
     ]
 }
+/**
+ * function sumObject(obj: any):number (sum of all numbers inside)
+ * sum = 0
+ * first: check if obj Array or Object
+ *      Array:
+ *          loop throgh all elements inside
+ *          element is number, save in sum
+ *          element is an Array OR Object:
+ *              same procedure for element, sumObject(element)
+ *      Object:
+ *          loop throgh all elements inside
+ *          element is number, save in sum
+ *          element is an Array OR Object:
+ *              same procedure for element, sumObject(element)
+ */
+let sum = 0;
+function sumObject(obj){
+    if(Array.isArray(obj)){
+        obj.forEach(element=>{
+            if(typeof element === "number"){
+                sum += element
+            }
+            // check if array OR object
+            else if(typeof element === "object"){
+                sumObject(element)
+            }
+        })
+    }else if(typeof obj === "object"){
+        for (let key in obj){
+            let element = obj[key]
+            if(typeof element ==="number" ){
+                sum += element
+            }else if (typeof element === "object"){
+                sumObject(element)
+            }
+        }
+    }
+}
+sumObject(crazyObject)
+console.log(sum)
+/**
+ * Object Printer objectToHTML(o: any):str, "<ul><li>value</li></ul>"
+ *  define str = ""
+ *      check if o is Array OR Object
+ *          Array:
+ *              add "<ul>" to str
+ *              loop all elements
+ *                  if element is (number, string, ..., NOT ARRAY, NOT OBJECT)
+ *                      add "<li>element</li>" to str 
+ *                  else if element is Array OR Object
+ *                      add objectToHTML(element) to str
+ *              add "</ul>" to str
+ *          if o is Object
+ *              add "<ul>" to str
+ *                  loop all elements
+ *                      if element is (number, string, ..., NOT ARRAY, NOT OBJECT)
+ *                          add "<li>element</li>" to str 
+ *                      else if element is Array OR Object
+ *                          add objectToHTML(element) to str
+ *              add "</ul>" to str
+ * 
+ * return str
+ */
+
+function objectToHTML(o){
+    let str  = ""
+    if(Array.isArray(o)){
+        str += "<ul>"
+        o.forEach(element=>{
+            if(typeof element !== "object" && !Array.isArray(element)){
+                str += `<li>&nbsp;&nbsp;${element}</li>`
+            }else{
+                str += "<li>&nbsp;&nbsp;" + objectToHTML(element) + "</li>"
+            }
+        })
+        str += "</ul>"
+    }else{
+        // Object here
+        str += "<ul>"
+        for(let key in o){
+            let element = o[key]
+            if(typeof element !== "object" && !Array.isArray(element)){
+                str += `<li>&nbsp;&nbsp;${element}</li>`
+            }else{
+                str +="<li>&nbsp;&nbsp;" + objectToHTML(element)+ "</li>"
+            }
+        }
+        str += "</ul>"
+    }
+    return str
+}
+/**
+ * <ul>
+ *  <li></li>
+ *  <li></li>
+ *  <li>
+ *      <ul>
+ *          <li></li>
+ *      </ul>
+ *  <li>
+ * </ul>
+ */
+let htmlStr = objectToHTML(crazyObject)
+document.write(htmlStr)
