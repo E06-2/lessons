@@ -265,9 +265,9 @@ function objectToHTML(o){
         for(let key in o){
             let element = o[key]
             if(typeof element !== "object" && !Array.isArray(element)){
-                str += `<li>&nbsp;&nbsp;${element}</li>`
+                str += `<li>&nbsp;&nbsp;  "${key}": ${element}</li>`
             }else{
-                str +="<li>&nbsp;&nbsp;" + objectToHTML(element)+ "</li>"
+                str +=`<li>&nbsp;&nbsp; "${key}": ${objectToHTML(element)} </li>`
             }
         }
         str += "</ul>"
