@@ -11,6 +11,10 @@ class Person {
     bYear = 0;
     married =  false;
     job = '';
+    /**
+     * will return full person name
+     * @returns 
+     */
     fullName = function() { 
         return this.fName + ' ' + this.lName;
     }
@@ -58,4 +62,24 @@ const newArr = new OurArray();
 newArr.push(1);
 newArr.push(6);
 console.log(newArr.getFirstElement());
+Person.prototype.showDescription = function() {
+    return `my name is ${this.fName} ${this.lName} and I am ${this.age()} 
+    years old and I work as ${this.job}`
+}
+console.log(ahmad.showDescription());
+/**
+ * this function will return a new String but every word will start with capital letter
+ * @returns new capitalize string
+ */
+String.prototype.capitalize = function() {
+    const strArr = this.split(' ');
+    const capitalizeArr = strArr.map(element => {
+        const newElement = element[0].toUpperCase() + element.slice(1);
+        return newElement;
+    });
+    return capitalizeArr.join(' ');
+}
 
+let str = 'this is a string';
+const newStr = str.capitalize();
+console.log(newStr);
