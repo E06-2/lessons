@@ -73,13 +73,13 @@ console.log(ahmad.showDescription());
  */
 String.prototype.capitalize = function() {
     const strArr = this.split(' ');
-    const capitalizeArr = strArr.map(element => {
-        const newElement = element[0].toUpperCase() + element.slice(1);
+    const capitalizeArr = strArr.map(word => {
+        // this  word[0].toUpperCase() + word.slice(1) = This
+        const newElement = word[0].toUpperCase() + word.slice(1);
         return newElement;
     });
     return capitalizeArr.join(' ');
 }
-
 let str = 'this is a string';
 const newStr = str.capitalize();
 console.log(newStr);
