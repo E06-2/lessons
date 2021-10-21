@@ -39,3 +39,23 @@ const ahmad = new Trainer('Ahmad', 'Osman', 1986, true, 'E06_2', 'Web Dev');
 const someOne = new Person('foo', 'boo', 2020, true)
 console.log(someOne.fullName());
 
+const arr = new Array();
+arr.push(1);
+arr.push(0);
+arr.push(6);
+console.log(arr);
+
+class OurArray extends Array {
+    constructor() {
+        super();
+    }
+    getFirstElement = function() {
+        return this[0];
+    }
+}
+
+const newArr = new OurArray();
+newArr.push(1);
+newArr.push(6);
+console.log(newArr.getFirstElement());
+
