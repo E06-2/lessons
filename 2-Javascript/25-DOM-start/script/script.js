@@ -39,4 +39,8 @@ function sum() {
     resultDiv.innerText = Number(input1.value) + Number(input2.value);
 }
 
+const lis = document.getElementsByTagName('li');
+console.log(lis);
+lis[2].style.backgroundColor = 'green';
+
 

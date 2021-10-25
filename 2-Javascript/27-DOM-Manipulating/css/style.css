@@ -1,0 +1,19 @@
+#list{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+#list li{
+    background-color: lightblue;
+    margin: 10px;
+    display: block;
+    width: 100%;
+    text-align: center;
+    list-style: none;
+}
+
+.active {
+    background-color: lightcoral !important;
+
+}
