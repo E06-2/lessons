@@ -91,9 +91,9 @@ person2.setMarried()
 // console.log(person1.age)
 
 // console.log(person1.fullName())
-let person1FullName = person1.fullName()
+let person1FullName = person1.getFullName()
 console.log("Person 1 Full Name: ", person1FullName)
-person2.fullName()
+person2.getFullName()
 
 /**
  * To test Methods (Functions):
@@ -102,3 +102,30 @@ person2.fullName()
  * 2- if the method is void (NO RETURN):
  *      just call this function back
  */
+
+//////////////////
+ // Student U Humman = Student
+//  Student A Humman = {firstName, lastName, ...}
+// Student \ Humman = registerId
+class Student extends Humman{
+    // firstName;
+    // lastName;
+    // age;
+    // married;
+    // ID;
+    registerId;
+    constructor(fn, ln, age, rd){
+        // super() === constructor for Father
+        super(fn, ln, age)
+        // this.firstName = fn
+        // this.lastName = ln
+        // this.age = age;
+        this.registerId = rd
+    }
+}
+let student1 = new Student("Steven", "Rami", 20, 4544)
+let student2 = new Student("John", "Travolta", 25, 4044)
+console.clear()
+console.log(student1)
+console.log(student2)
+console.log(student1.isAdult())
