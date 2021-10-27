@@ -62,3 +62,18 @@ console.log(result)
 // console.clear()
 // let str = "         this is my text    I          "
 // console.log(str.trim())
+
+function palindromeCheck(e){
+    e.preventDefault()
+    // console.log(e.offsetX)
+    /**
+     * 1- get the text from texterea
+     */
+    // alert("Button Clicked!")
+    const textErea = document.getElementById("myText")
+    let val = textErea.value.trim().replace("\n", " ").trim()
+    console.log(val)
+    // console.log(val)
+    let palindroms = getPalendrome(val)
+    console.log(palindroms)
+}
