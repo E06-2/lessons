@@ -71,9 +71,18 @@ function palindromeCheck(e){
      */
     // alert("Button Clicked!")
     const textErea = document.getElementById("myText")
-    let val = textErea.value.trim().replace("\n", " ").trim()
-    console.log(val)
+    let val = textErea.value.replace(/\n/g, " ").trim()
+    // console.log(val)
     // console.log(val)
     let palindroms = getPalendrome(val)
     console.log(palindroms)
+    let result = document.getElementById("res")
+    // result.innerHTML = palindroms
+    let htmlString = "<ul>"
+    palindroms.forEach(el=>{
+        htmlString += "<li>" + el + "</li>"
+    })
+    htmlString += "</ul>"
+    console.log(htmlString)
+    result.innerHTML = htmlString
 }
