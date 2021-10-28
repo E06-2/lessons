@@ -12,8 +12,11 @@
 
 .ball{
     position: absolute;
-    height: 30px;
+    height: 40px;
     width: 30px;
-    background-color: aqua;
-    border-radius: 50%;
+    background-color: transparent;
+    background-image: url('../images/ballon.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* border-radius: 50%; */
 }
