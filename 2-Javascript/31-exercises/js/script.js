@@ -42,12 +42,24 @@ function move (ball) {
             clearInterval(pid);
             // change the background image of ball
             ball.style.backgroundImage = "url('../images/explod.png')";
+            // play sound
             explosionSound.pause();
             explosionSound.currentTime = 0;
             explosionSound.play();
+            // setTimeout after one seconds
+            setTimeout(() => {
+                // remove the ball from the dom
+                ball.remove();
+            }, 1000)
         }
     }, 15)
 }
+
+// create a tank div
+// this code should be inside interval
+const tank = document.createElement('div');
+tank.classList.add('tank');
+container.append(tank);
 
 
 // new information
@@ -55,3 +67,5 @@ function move (ball) {
 // 2- append
 // 3- offsetTop
 // 4- offsetHeight
+// 5- create and play sound via javascript
+// 6- element remove from DOM

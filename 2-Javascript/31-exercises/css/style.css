@@ -20,3 +20,15 @@
     background-size: cover;
     /* border-radius: 50%; */
 }
+
+.tank {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 70px;
+    height: 30px;
+    background-color: transparent;
+    background-image: url('../images/tank.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
