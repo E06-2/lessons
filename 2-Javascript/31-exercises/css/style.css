@@ -1,0 +1,19 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    background-color: pink;
+}
+
+#container {
+    position: relative;
+    height: 100vh;
+}
+
+.ball{
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    background-color: aqua;
+    border-radius: 50%;
+}
