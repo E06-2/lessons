@@ -56,16 +56,37 @@ function move (ball) {
 }
 
 // create a tank div
-// this code should be inside interval
+
+
+setInterval(() => {
+    // this code should be inside interval
 const tank = document.createElement('div');
 tank.classList.add('tank');
 container.append(tank);
+moveTank(tank);
+}, 1000)
 
+let lost = 0;
+let score = 0;
 
+function moveTank(panzer) {
+
+    let left = 0;
+    const pid = setInterval(() => {
+        const containerWidth = container.offsetWidth;
+        left += 5;
+        panzer.style.left = left + 'px';
+        if (left >= containerWidth) {
+            clearInterval(pid);
+            panzer.remove();
+            lost++;
+        }
+    }, 20)
+}
 // new information
 // 1- createElement
 // 2- append
-// 3- offsetTop
+// 3- offsetTop, offsetWidth
 // 4- offsetHeight
 // 5- create and play sound via javascript
 // 6- element remove from DOM
