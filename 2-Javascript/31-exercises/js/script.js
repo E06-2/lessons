@@ -90,3 +90,6 @@ function moveTank(panzer) {
 // 4- offsetHeight
 // 5- create and play sound via javascript
 // 6- element remove from DOM
+
+// check if the ballon hits the tank 
+// so the tank should be removed and the score should be increased
