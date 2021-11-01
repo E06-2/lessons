@@ -7,7 +7,7 @@
 //  "identifier"   =>  "identifier"
 //  ""             =>  ""
 
-const breakCamelCase(str) => {
+const breakCamelCase = (str) => {
     //TODO
     return str
 }
@@ -18,7 +18,7 @@ const breakCamelCase(str) => {
 // For example, the string:
 // "This website is for losers LOL!" would become "Ths wbst s fr lsrs LL!".
 
-const disemvowel(str) => {
+const disemvowel = (str) => {
     //TODO
     return str
 }
@@ -28,7 +28,7 @@ const disemvowel(str) => {
 //
 // https://google.com => google
 
-const domainExtractor(ulr) => {
+const domainExtractor = (ulr) => {
     //TODO
-    return ulr
+    return url
 }
