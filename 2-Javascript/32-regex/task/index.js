@@ -9,8 +9,11 @@
 
 const breakCamelCase = (str) => {
     //TODO
-    return str
+    let re = /([a-z])([A-Z])/g
+    return str.replace(re, '$1 $2')
 }
+
+//console.log(breakCamelCase("camelCase"));
 
 
 // Vowel remover
@@ -20,15 +23,26 @@ const breakCamelCase = (str) => {
 
 const disemvowel = (str) => {
     //TODO
-    return str
+    let re = /[aeiou]/ig;
+    return str.replace(re, "")
 }
+
+//console.log(disemvowel("This website is for losers LOL!"));
 
 // Filter information from URL
 // Given string of text retung the URL domain name
 //
 // https://google.com => google
 
-const domainExtractor = (ulr) => {
+const domainExtractor = (url) => {
     //TODO
     return url
+        .replace("http://", "")
+        .replace("https://", "")
+        .replace("www", "")
+        .split('.')[1]
+
+    // return url.replace("https://", "").split(".")[1]
 }
+
+console.log(domainExtractor('https://www.google.com'));
