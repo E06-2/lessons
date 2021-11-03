@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Online Editor</title>
+    <style>
+        .editor{
+            border: 1px solid;
+            width: 100%;
+            margin: auto;
+            min-height: 70vh;
+        }
+        .editor>.code, .editor>.result{
+            border: 1px solid;
+            width: 49%;
+            min-height: 70vh;
+            float: left;
+            display: inline;
+        }
+        .editor>.code{
+            padding-left: 5px;
+        }
+        .editor textarea{
+            width: 95%;
+            min-height: 55vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="editor">
+        <div class="code">
+            <h2>Type the Code Here</h2>
+            <textarea name="hCode" id="hCode" cols="30" rows="10"></textarea>
+        </div>
+        <div class="result"></div>
+    </div>
+
+
+
+    <script src="./js/HTMLEditor.js"></script>
+</body>
+</html>
