@@ -24,3 +24,18 @@ console.log(fieldB)
 // console.log(fieldA.innerHTML)
 fieldA.innerHTML = "<h3>Hi</h3>"
 console.log(fieldA.innerHTML)
+fieldB.innerHTML = "DATA"
+// fieldB.innerHTML = fieldB.innerHTML + " Structure"
+fieldB.innerHTML += " <b id='n' style='color: red'>Structure</b>"
+// fieldA.parentElement.innerHTML = "Hello"
+// document.body.innerHTML = "HAHAHA"
+
+/**
+ * <HTML>.innerText ===> the content as a string
+ * <HTML>.innerText = "String"
+ * NO HTML charactures (NO rendering)
+ */
+// fieldB.innerText = "<b>Structure</b>"
+// document.body.innerText = "HAHAHA"
+let n = document.getElementById("n")
+console.log(n)
