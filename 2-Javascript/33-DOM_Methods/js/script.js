@@ -25,12 +25,16 @@ console.log(myDiv.parentElement.parentElement)
 // let t =str.replace("T", "t").replace("H", "h").replace("y", "Y")
 // console.log(t)
 
-let children = myDiv.children// [ul]
-// children.addEventListener("click", e=>{
+let ulCollection = myDiv.children// [ul] HTMLCollection
+// ul = allKidsInMyDiv[0] HTML Element
+// ulCollection.addEventListener("click", e=>{
 //     console.log(e)
 // })
 // ANY_HTML_ENEMENT.children ===> HTMLCollection (Multiple)
-console.log(children)
+
+// IMPORTANT: we cannot loop throgh HTML ELEMENTS, but we can loop throgh any HTMLELEMENT.children
+
+console.log(ulCollection)
 // for (let kid of children){
 //     console.log(kid)
 // }
@@ -40,12 +44,31 @@ console.log(children)
 // for(let i = 0; i< children.length; i++){
 //     console.log(i, children[i])
 // }
-console.log(children[0].parentElement)
+console.log(ulCollection[0].parentElement)
 
 // task0
 // using (start point is: myDiv): log all <li> inside myDiv
 console.clear()
-console.log(children[0].children)
-for(let li of children[0].children){
+console.log(ulCollection[0].children)
+for(let li of ulCollection[0].children){
     console.log(li)
 }
+console.clear()
+// Task1
+// color each odd <li> red
+// Array.from(ulCollection[1].children).forEach((li, index)=>{
+//     // console.log(li)
+//     if(index % 2 === 0){
+//         li.style.color = "red"
+//     }
+// })
+// get all children inside myDiv
+Array.from(myDiv.children).forEach(ul=>{
+    // get all <li> inside each <ul>
+    Array.from(ul.children).forEach((li, index)=>{
+        // only even ... do so
+        if(index % 2 === 0){
+            li.style.color = "red"
+        }
+    })
+})
