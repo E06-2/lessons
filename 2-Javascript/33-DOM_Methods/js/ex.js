@@ -18,6 +18,9 @@ Array.from(myTable.children[0].children).forEach((tr, r)=>{
     Array.from(tr.children).forEach((td, d)=>{
         // console.log(d, td)
         td.innerHTML = `(${r}, ${d})`
+        if(r > 3){
+            td.setAttribute("class", "bla")
+        }
         r===d?td.style.backgroundColor = "brown":null
     })
 })
