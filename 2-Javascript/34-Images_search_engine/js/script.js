@@ -133,3 +133,9 @@ window.addEventListener('scroll', async (e) => {
 // new concepts:
 // async await
 // try catch
+
+
+// task:
+
+// add another select for category https://pixabay.com/api/docs/
+//Accepted values: backgrounds, fashion, nature, science, education, feelings, health, people, religion, places, animals, industry, computer, food, sports, transportation, travel, buildings, business, music

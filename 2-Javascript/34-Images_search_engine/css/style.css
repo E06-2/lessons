@@ -52,7 +52,7 @@ html{
     cursor: pointer;
     width: 90%;
     height: 15rem;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .over-all{
