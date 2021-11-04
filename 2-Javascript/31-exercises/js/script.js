@@ -1,5 +1,10 @@
 const container = document.querySelector('#container');
 
+// create top bar 
+const topBar = document.createElement('div');
+topBar.classList.add('top-bar');
+container.appendChild(topBar);
+
 // create audio element to play explosion sound 
 const explosionSound = document.createElement('audio');
 explosionSound.src = './sounds/explod.mp3';
