@@ -1,9 +1,15 @@
 const container = document.querySelector('#container');
 
+let lost = 0;
+let score = 0;
 // create top bar 
 const topBar = document.createElement('div');
 topBar.classList.add('top-bar');
-container.appendChild(topBar);
+topBar.innerHTML = `
+<h2>Score: ${score}</h2>
+<h2>Lost: ${lost}</h2>
+`
+container.append(topBar);
 
 // create audio element to play explosion sound 
 const explosionSound = document.createElement('audio');
@@ -71,8 +77,7 @@ container.append(tank);
 moveTank(tank);
 }, 1000)
 
-let lost = 0;
-let score = 0;
+
 
 function moveTank(panzer) {
 
