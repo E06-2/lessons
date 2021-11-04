@@ -14,8 +14,16 @@ searchBtn.addEventListener('click', async () => {
     try {
         const response = await fetch(url);
         const data = await response.json();
-        console.log(data);
-        resultSection.textContent = 'we got the data';
+        console.log(data.hits);
+        //resultSection.textContent = 'we got the data';
+        data.hits.forEach(result => {
+            const imageDiv = document.createElement('div');
+            const img = document.createElement('img');
+            img.src = result.previewURL;
+            imageDiv.append(img);
+            resultSection.append(imageDiv);
+        })
+
     } catch (error) {
         resultSection.textContent = 'there is an error with getting the data';
     }
