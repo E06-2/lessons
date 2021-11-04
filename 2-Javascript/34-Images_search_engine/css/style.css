@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+.search-section{
+    display: flex;
+    justify-content: center;
+}
+
+.search-word{
+    width: 80%;
+    display: flex;
+    margin-top: 1rem;
+
+}
+.search-word > input {
+    width: 80%;
+    border-left-width: 0;
+    height: 3rem;
+    padding: .5rem;
+}
+.search-word > button {
+    width: 20%;
+    border-right-width: 0;
+    height: 3rem;
+    background-color: lightblue;
+}
