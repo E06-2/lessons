@@ -90,6 +90,7 @@ function moveTank(panzer) {
             clearInterval(pid);
             panzer.remove();
             lost++;
+            topBar.children[1].textContent = `Lost: ${lost}`;
         }
 
         const ballArray = Array.from(document.querySelectorAll('.ball'));
@@ -104,8 +105,10 @@ function moveTank(panzer) {
                         // check if ball has exploded
                         if(!ball.style.backgroundImage.includes('explod')){
                         ball.remove();
+                        clearInterval(pid);
                         panzer.remove();
                         score++;
+                        topBar.children[0].textContent = `Score: ${score}`;
                         }
                     } 
         })
