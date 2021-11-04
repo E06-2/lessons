@@ -45,10 +45,14 @@ html{
     width: 25%;
     display: flex;
     justify-content: center;
+    padding: 1rem;
+
 }
 .result-section > div > img {
     cursor: pointer;
     width: 90%;
+    height: 15rem;
+    object-fit: cover;
 }
 
 .over-all{
