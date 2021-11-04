@@ -3,13 +3,17 @@ const searchWordInp = document.getElementById('searchWordInp');
 const searchBtn = document.getElementById('searchBtn');
 const resultSection = document.getElementById('resultSection');
 const overallDiv = document.getElementById('overallDiv');
+const colorSelect = document.getElementById('colorSelect');
 
 // add event listener to search button
 searchBtn.addEventListener('click', async () => {
     //alert(searchWordInp.value)
+    // get the value of the selected color
+    const color = colorSelect.value;
     const url = 'https://pixabay.com/api/?' +
         'key=23836825-d28900a4f5025893278996a18' +
-        '&q=' + searchWordInp.value;
+        '&q=' + searchWordInp.value +
+        (color ? '&colors=' + color : '');
     resultSection.textContent = 'Loading...';
     
     try {
@@ -52,6 +56,12 @@ searchBtn.addEventListener('click', async () => {
     // }).catch(error => {
     //     resultSection.textContent = 'An Error accrued while getting the Data';
     // })
+})
+
+// close overall div on click
+overallDiv.addEventListener('click', () => {
+    overallDiv.style.display = 'none';
+    overallDiv.innerHTML = '';
 })
 
 // new concepts:
