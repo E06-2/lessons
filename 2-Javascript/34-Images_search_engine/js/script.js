@@ -2,6 +2,7 @@
 const searchWordInp = document.getElementById('searchWordInp');
 const searchBtn = document.getElementById('searchBtn');
 const resultSection = document.getElementById('resultSection');
+const overallDiv = document.getElementById('overallDiv');
 
 // add event listener to search button
 searchBtn.addEventListener('click', async () => {
@@ -16,10 +17,18 @@ searchBtn.addEventListener('click', async () => {
         const data = await response.json();
         console.log(data.hits);
         //resultSection.textContent = 'we got the data';
+        resultSection.textContent = '';
         data.hits.forEach(result => {
             const imageDiv = document.createElement('div');
             const img = document.createElement('img');
             img.src = result.previewURL;
+            //set click event listener to image
+            img.addEventListener('click', () => {
+                const largeImg = document.createElement('img');
+                largeImg.src = result.largeImageURL;
+                overallDiv.append(largeImg);
+                overallDiv.style.display = 'flex';
+            })
             imageDiv.append(img);
             resultSection.append(imageDiv);
         })
