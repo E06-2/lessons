@@ -6,7 +6,7 @@ const resultSection = document.getElementById('resultSection');
 // add event listener to search button
 searchBtn.addEventListener('click', async () => {
     //alert(searchWordInp.value)
-    const url = 'https://pixabay1.com/api/?' +
+    const url = 'https://pixabay.com/api/?' +
         'key=23836825-d28900a4f5025893278996a18' +
         '&q=' + searchWordInp.value;
     resultSection.textContent = 'Loading...';
