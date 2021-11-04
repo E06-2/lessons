@@ -81,6 +81,26 @@ function moveTank(panzer) {
             panzer.remove();
             lost++;
         }
+
+        const ballArray = Array.from(document.querySelectorAll('.ball'));
+        ballArray.forEach(ball => {
+            if (ball.offsetTop + 40 >= panzer.offsetTop && 
+                ((ball.offsetLeft >= panzer.offsetLeft 
+                    && ball.offsetLeft <= panzer.offsetLeft + 70) 
+                    || ball.offsetLeft + 30 >= panzer.offsetLeft 
+                    && ball.offsetLeft + 30 <= panzer.offsetLeft + 70 
+                    )
+                    ){
+                        // check if ball has exploded
+                        if(!ball.style.backgroundImage.includes('explod')){
+                        ball.remove();
+                        panzer.remove();
+                        score++;
+                        }
+                    } 
+        })
+
+
     }, 20)
 }
 // new information
