@@ -117,7 +117,7 @@ window.addEventListener('scroll', async (e) => {
         })
 
     } catch (error) {
-        resultSection.textContent = 'there is an error with getting the data';
+        //resultSection.textContent = 'there is an error with getting the data';
     }
 
 
