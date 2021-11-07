@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Search Engine</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <section class="search-section">
+        <div class="search-word">
+            <button id="searchBtn">Search</button>
+            <input id="searchWordInp" type="text" placeholder="Write Search Word here">
+        </div>
+        <div class="search-color">
+            <select  id="colorSelect">
+                <option value="">Select Color</option>
+                <option value="grayscale">grayscale</option>
+                <option value="transparent">transparent</option>
+                <option value="red">red</option>
+                <option value="orange">orange</option>
+                <option value="yellow">yellow</option>
+                <option value="green">green</option>
+                <option value="turquoise">turquoise</option>
+                <option value="blue">blue</option>
+                <option value="lilac">lilac</option>
+                <option value="pink">pink</option>
+                <option value="white">white</option>
+                <option value="gray">gray</option>
+                <option value="black">black</option>
+                <option value="brown">brown</option>
+            </select>
+        </div>
+    </section>
+    <section id="resultSection" class="result-section"></section>
+    <div id="overallDiv" class="over-all"></div>
+
+
+    <script src="./js/script.js"></script>
+</body>
+</html>

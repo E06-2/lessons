@@ -1,5 +1,16 @@
 const container = document.querySelector('#container');
 
+let lost = 0;
+let score = 0;
+// create top bar 
+const topBar = document.createElement('div');
+topBar.classList.add('top-bar');
+topBar.innerHTML = `
+<h2>Score: ${score}</h2>
+<h2>Lost: ${lost}</h2>
+`
+container.append(topBar);
+
 // create audio element to play explosion sound 
 const explosionSound = document.createElement('audio');
 explosionSound.src = './sounds/explod.mp3';
@@ -66,8 +77,7 @@ container.append(tank);
 moveTank(tank);
 }, 1000)
 
-let lost = 0;
-let score = 0;
+
 
 function moveTank(panzer) {
 
@@ -80,7 +90,30 @@ function moveTank(panzer) {
             clearInterval(pid);
             panzer.remove();
             lost++;
+            topBar.children[1].textContent = `Lost: ${lost}`;
         }
+
+        const ballArray = Array.from(document.querySelectorAll('.ball'));
+        ballArray.forEach(ball => {
+            if (ball.offsetTop + 40 >= panzer.offsetTop && 
+                ((ball.offsetLeft >= panzer.offsetLeft 
+                    && ball.offsetLeft <= panzer.offsetLeft + 70) 
+                    || ball.offsetLeft + 30 >= panzer.offsetLeft 
+                    && ball.offsetLeft + 30 <= panzer.offsetLeft + 70 
+                    )
+                    ){
+                        // check if ball has exploded
+                        if(!ball.style.backgroundImage.includes('explod')){
+                        ball.remove();
+                        clearInterval(pid);
+                        panzer.remove();
+                        score++;
+                        topBar.children[0].textContent = `Score: ${score}`;
+                        }
+                    } 
+        })
+
+
     }, 20)
 }
 // new information

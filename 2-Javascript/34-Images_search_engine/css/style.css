@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+.search-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-word, .search-color{
+    width: 80%;
+    display: flex;
+    margin-top: 1rem;
+    height: 3rem;
+
+}
+.search-color >select {
+    width:100%;
+}
+.search-word > input {
+    width: 80%;
+    border-left-width: 0;
+    padding: .5rem;
+}
+.search-word > button {
+    width: 20%;
+    border-right-width: 0;
+    background-color: lightblue;
+}
+
+.result-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+.result-section > div {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+
+}
+.result-section > div > img {
+    cursor: pointer;
+    width: 90%;
+    height: 15rem;
+    object-fit: contain;
+}
+
+.over-all{
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.over-all > img {
+    height: 70%;
+    
+}
