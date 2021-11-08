@@ -27,6 +27,7 @@ window.onload = ()=>{
 
     // container.appendChild(contentDiv)
     getPosts(contentDiv)
+    // getPosts(document.body)
 }
 function getPosts(div){
 
@@ -39,6 +40,8 @@ function getPosts(div){
                     console.log(post)
                     //a- for each object(POST) inside, create anew div (postConteiner)
                     const postConteiner = document.createElement("div")
+                    postConteiner.classList.add("postContainer")
+                    // postConteiner.style.border = "1px solid"
                     //b- create h2 element, put inside it the title of the POST
                     const postTitle = document.createElement("h2")
                     postTitle.innerHTML = post.title
