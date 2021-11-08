@@ -13,12 +13,15 @@
 /**
  * when document loaded, do some procedures
  */
+
 window.onload = ()=>{
     // console.log("Document loaded")
     // create content div
     const contentDiv = document.createElement("div")
     // getting container div
     const container = document.getElementsByClassName('container')[0]
+    // getting selector
+    const userSelector = document.getElementById("usersSelect")
     // put contentDiv inside container div
     container.append(contentDiv)
     // style the contentDiv
@@ -26,25 +29,37 @@ window.onload = ()=>{
     contentDiv.classList.add("content")
 
     // container.appendChild(contentDiv)
-    getPosts(contentDiv)
+    getPosts(contentDiv, 0)
     /* Task1: fill select tag (userSelect) with all users found in ('https://jsonplaceholder.typicode.com/users')
      with this structure: <option value="userId">the name of the user</option>
      hint: create a function for that (getUsers()), and call it here
      */
     getUsers()
     /**
-     * Task2: assign an eventlistener for usersSelect, event type (change), handler: function
+     * Task2: assign an eventlistener for usersSelect, event-type: (change), handler: function
      * call inside it getPosts(contentDiv, userId) 
      * hint: userId is the value from selected tag
      * do the some changes for getPosts to make it works like url:
      * https://jsonplaceholder.typicode.com/posts?userId=5
      */
+     userSelector.addEventListener("change", e=>{
+        //  console.log("Some event happend")
+         // e.target ==> HTMLElement which has this eventListener <==> userSelector
+         console.log(e.target.value)
+         getPosts(contentDiv, e.target.value)
+     })
 }
-function getPosts(div){
-    fetch('https://jsonplaceholder.typicode.com/posts').then(response=>{
+function getPosts(div, userId){
+    let url = 'https://jsonplaceholder.typicode.com/posts'
+    if(userId != 0){
+        url = url + "?userId=" + userId
+    }
+    fetch(url).then(response=>{
         // console.log(response)
         response.json().then(data=>{
-            // console.log(data)
+            // console.log(data).
+            //0- clear div or contentDiv
+            div.innerHTML = ""
             //1- loop for each object (POSTS) inside
                 data.forEach(post=>{
                     // console.log(post)
