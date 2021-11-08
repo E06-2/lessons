@@ -29,7 +29,15 @@ window.onload = ()=>{
     getPosts(contentDiv)
     /* Task1: fill select tag (userSelect) with all users found in ('https://jsonplaceholder.typicode.com/users')
      with this structure: <option value="userId">the name of the user</option>
-     hint: create a function fo that (getUsers()), and call it here
+     hint: create a function for that (getUsers()), and call it here
+     */
+    getUsers()
+    /**
+     * Task2: assign an eventlistener for usersSelect, event type (change), handler: function
+     * call inside it getPosts(contentDiv, userId) 
+     * hint: userId is the value from selected tag
+     * do the some changes for getPosts to make it works like url:
+     * https://jsonplaceholder.typicode.com/posts?userId=5
      */
 }
 function getPosts(div){
@@ -39,7 +47,7 @@ function getPosts(div){
             // console.log(data)
             //1- loop for each object (POSTS) inside
                 data.forEach(post=>{
-                    console.log(post)
+                    // console.log(post)
                     //a- for each object(POST) inside, create anew div (postConteiner)
                     const postConteiner = document.createElement("div")
                     postConteiner.classList.add("postContainer")
@@ -60,4 +68,28 @@ function getPosts(div){
         console.log(error)
     })
 }
+
+function getUsers(){
+    const userSelector = document.getElementById("usersSelect")
+    fetch('https://jsonplaceholder.typicode.com/users').then(response=>{
+        response.json().then(data=>{
+            data.forEach(user=>{
+                // console.log(user)
+                const option = document.createElement("option")
+                option.innerHTML = user['name']
+                // set a new attribute for html element <HTMLElement>.setAttribute(the name of atrr(STRING), value for)
+                option.setAttribute("value", user.id)
+                // option.setAttribute("style", "color: red")
+                // <HTMLElement>.append(<HTMLElement>) ==> keep the original and add at the end  the new stuff
+                userSelector.appendChild(option)
+                // userSelector.innerHTML = `<option>${user.name}</option>`
+            })
+        }).catch(err=>{
+            console.log(err)
+        })
+    }).catch(error=>{
+        console.log(error)
+    });
+}
+
 
