@@ -25,4 +25,8 @@ textArea.addEventListener("keyup", e=>{
         textArea.value = ""
     }
     result.innerHTML = textArea.value
+
+    Array.from(result.getElementsByTagName("script")).forEach(script=>{
+        eval(script.textContent)
+    })
 })
