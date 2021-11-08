@@ -26,23 +26,27 @@ window.onload = ()=>{
     contentDiv.classList.add("content")
 
     // container.appendChild(contentDiv)
-    getPosts()
+    getPosts(contentDiv)
 }
-function getPosts(){
+function getPosts(div){
+
     fetch('https://jsonplaceholder.typicode.com/posts').then(response=>{
         // console.log(response)
         response.json().then(data=>{
-            console.log(data)
+            // console.log(data)
             //1- loop for each object (POSTS) inside
-                // TODO
-                //a- for each object(POST) inside, create anew div (postConteiner)
-                // TODO
-                //b- create h2 element, put inside it the title of the POST
-                // TODO
-                //c- put this h2 element inside (postConteiner)
-                // TODO
-                //d- put this postConteiner inside (contentDiv)
-                // TODO
+                data.forEach(post=>{
+                    console.log(post)
+                    //a- for each object(POST) inside, create anew div (postConteiner)
+                    const postConteiner = document.createElement("div")
+                    //b- create h2 element, put inside it the title of the POST
+                    const postTitle = document.createElement("h2")
+                    postTitle.innerHTML = post.title
+                    //c- put this h2 element inside (postConteiner)
+                    postConteiner.appendChild(postTitle)
+                    //d- put this postConteiner inside (contentDiv)
+                    div.appendChild(postConteiner)
+            })
 
         }).catch(er=>{
             console.log(er)
