@@ -27,10 +27,12 @@ window.onload = ()=>{
 
     // container.appendChild(contentDiv)
     getPosts(contentDiv)
-    // getPosts(document.body)
+    /* Task1: fill select tag (userSelect) with all users found in ('https://jsonplaceholder.typicode.com/users')
+     with this structure: <option value="userId">the name of the user</option>
+     hint: create a function fo that (getUsers()), and call it here
+     */
 }
 function getPosts(div){
-
     fetch('https://jsonplaceholder.typicode.com/posts').then(response=>{
         // console.log(response)
         response.json().then(data=>{
@@ -58,8 +60,4 @@ function getPosts(div){
         console.log(error)
     })
 }
-// Promise.then(data=>{
-//     // no error
-// }).catch(errrror=>{
-// // handle error
-// })
+
