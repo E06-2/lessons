@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DOM recap</title>
+    </head>
+    <body onload="">
+        <!-- <div id="demo">
+            <h2>#id Demo</h2>
+            <div class="demo">
+                <p>I am a para</p>
+            </div>
+            <div class="demo"></div>
+        </div> -->
+
+        <!-- Bubbling Event propagation -->
+        <form onclick="alert('form')">
+            FORM
+            <div onclick="alert('div')">
+                DIV
+                <p onclick="alert('p')">P</p>
+            </div>
+        </form>
+
+        <!-- Preventing Default -->
+        <h2>Default click</h2>
+        <form><button id="btn">submit</button></form>
+
+        <!-- Event Delegation -->
+        <h2>Event Delegation</h2>
+        <div id="buttons">
+            <p>buttons</p>
+            <button class="buttonClass">Click Me</button>
+            <button class="buttonClass">Click Meee</button>
+            <button class="buttonClass">Click Me too</button>
+        </div>
+
+        <script src="./js/script.js"></script>
+    </body>
+</html>
