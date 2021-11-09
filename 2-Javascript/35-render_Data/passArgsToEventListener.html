@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="handleClick(event)">1</button>
+    <button data-mostafa="sss" onclick="handleClick(event)">2</button>
+    <button onclick="handleClick(null)">3</button>
+    <button onclick="handleClick(this)">4</button>
+    <button onclick="handleClick({t:1})">5</button>
+    <button onclick="handleClick(this)">6</button>
+    <button onclick="handleClick(500)">7</button>
+    <button onclick="handleClick(false)">8</button>
+    <button onclick="handleClick([5,3])">9</button>
+    <button onclick="handleClick(this)">10</button>
+<hr>
+    <select name="" id="s" onchange="getOptionName(event)">
+      <option value="f">M1</option>
+      <option value="s">M2</option>
+      <option value="h">M3</option>
+      <option value="4">M4</option>
+      <option value="r">M5</option>
+      <option value="hf">M6</option>
+      <option value="dfg">M7</option>
+      <option value="zfb">M8</option>
+      <option value="zdf">M9</option>
+      <option value="xcvb">M10</option>
+      <option value="xcevb">M11</option>
+      <option value="sdfg">M12</option>
+      <option value="ae">M13</option>
+      <option value="a3e">M14</option>
+      <option value="4t">M15</option>
+    </select>
+    <h2 id="res"></h2>
+    <script>
+      const res = document.getElementById("res")
+      function getOptionName(e){
+        // console.log("Changed")
+        let optionName = e.target.options[e.target.selectedIndex].innerHTML
+        console.log(optionName)
+        res.innerHTML = optionName
+      }
+        // const buttons = document.getElementsByTagName("button")
+        // Array.from(buttons).forEach(button=>{
+        //     button.addEventListener("click", e=>{
+        //     alert(button.innerHTML)
+        // })
+        // })
+function handleClick(arg){
+    // e.target ===> element HTML
+    // alert(e.target.innerHTML)
+    // arg.target.style.width="50px"
+    // arg.style.width = "50px"
+    arg.target.setAttribute("data-mostafa", "HHH")
+    console.log(arg.target.getAttribute("data-mostafa"))
+}
+
+    </script>
+  </body>
+</html>

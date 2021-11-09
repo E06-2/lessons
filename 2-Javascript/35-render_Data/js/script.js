@@ -22,6 +22,8 @@ window.onload = ()=>{
     const container = document.getElementsByClassName('container')[0]
     // getting selector
     const userSelector = document.getElementById("usersSelect")
+    // getting title
+    const title = document.getElementsByTagName("h1")[0]
     // put contentDiv inside container div
     container.append(contentDiv)
     // style the contentDiv
@@ -45,9 +47,38 @@ window.onload = ()=>{
      userSelector.addEventListener("change", e=>{
         //  console.log("Some event happend")
          // e.target ==> HTMLElement which has this eventListener <==> userSelector
-         console.log(e.target.value)
+        console.log(e.target.value)
+        //  console.log(e.target.children[e.target.value].innerHTML)
+        // get text selected from select option 
+        let index = e.target.selectedIndex// which item you selected as number
+        let name = e.target.options[index].innerHTML
+        console.log(name)
+        title.innerHTML= `<i>${name}'s</i> Posts`
          getPosts(contentDiv, e.target.value)
+         title.setAttribute("title", "Name of Creator")
      })
+     /**
+      * Task-3:
+      * 1- assign an eventListener for each post, event-type = click, handler: function:
+      * create a function showPost(postId) need to be called inside handler
+      *     a- clear contentDiv
+      *     b- this wil make a new fetch request to this url:(https://jsonplaceholder.typicode.com/posts?id=postId) "make sure to change postId"
+      *     c- when got a response (one post object):
+      *         1- create a new div
+      *         2- put inside it <h2>postTitle</h1>
+      *         3- <span>created by: user name</span>
+      *         4- <p>post body</p>
+      *         5- put this div in contentDiv
+      *         6- make some styling for post stuff (classes or inline styling)
+      * hints:
+      *     You may put some attributes for each post (while creating the posts)
+      *         attribute may like: post-id='5'
+      *     so that you will use it when you call showPost(postId) function,
+      *      use element.getAttribute("name of the attribute").
+      *     For getting username: fetch request to :https://jsonplaceholder.typicode.com/users?id=1
+      *         just replace 1 with post.userId, then you got an object for the user you can get name from it.
+      */
+
 }
 function getPosts(div, userId){
     let url = 'https://jsonplaceholder.typicode.com/posts'
@@ -94,6 +125,7 @@ function getUsers(){
                 option.innerHTML = user['name']
                 // set a new attribute for html element <HTMLElement>.setAttribute(the name of atrr(STRING), value for)
                 option.setAttribute("value", user.id)
+                // option.setAttribute("M", "0")
                 // option.setAttribute("style", "color: red")
                 // <HTMLElement>.append(<HTMLElement>) ==> keep the original and add at the end  the new stuff
                 userSelector.appendChild(option)
