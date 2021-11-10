@@ -4,6 +4,7 @@ const searchBtn = document.getElementById('searchBtn');
 const resultSection = document.getElementById('resultSection');
 const overallDiv = document.getElementById('overallDiv');
 const colorSelect = document.getElementById('colorSelect');
+const categorySelect = document.getElementById('categorySelect');
 
 let pageNumber = 1
 
@@ -14,10 +15,12 @@ searchBtn.addEventListener('click', async () => {
     //alert(searchWordInp.value)
     // get the value of the selected color
     const color = colorSelect.value;
+    const category = categorySelect.value;
     const url = 'https://pixabay.com/api/?' +
         'key=23836825-d28900a4f5025893278996a18' +
         '&q=' + searchWordInp.value +
         (color ? '&colors=' + color : '')+
+        (category ? '&category=' + category : '') +
         `&page=${pageNumber}`
         ;
     resultSection.textContent = 'Loading...';
@@ -87,13 +90,15 @@ window.addEventListener('scroll', async (e) => {
         //alert(searchWordInp.value)
     // get the value of the selected color
     const color = colorSelect.value;
+    const category = categorySelect.value;
     const url = 'https://pixabay.com/api/?' +
         'key=23836825-d28900a4f5025893278996a18' +
         '&q=' + searchWordInp.value +
         (color ? '&colors=' + color : '')+
+        (category ? '&category=' + category : '') +
         `&page=${pageNumber}`
         ;
-    
+    console.log(url);
     try {
         const response = await fetch(url);
         const data = await response.json();
