@@ -66,6 +66,24 @@ todoInp.addEventListener('keyup', (e) => {
     }
 })
 
+let progressArr = [];
+
+// task 6: 
+// read local storage and try to get the value of [progress] key
+// if exists, add the values to progressArr
+// create a function to render elements from progressArr to progressList
+const localStorageProgress = localStorage.getItem('progress');
+if (localStorageProgress) {
+    progressArr = JSON.parse(localStorageProgress);
+    renderProgressList();
+}
+function renderProgressList () {
+    progressList.innerHTML = '';
+    progressArr.forEach(item => {
+        addProgressItem(item);
+    })
+}
+
 // add Item to todo list
 function addTodoItem(text) {
     const li = document.createElement('li');
@@ -88,6 +106,24 @@ function addTodoItem(text) {
     const moveToProgressListBtn = document.createElement('button');
     moveToProgressListBtn.innerHTML = '<i class="fas fa-arrow-alt-circle-right"></i>';
 
+    // task 4:
+    // add event listener to move to progress list button and call addProgressItem
+    // function with parameter text
+    moveToProgressListBtn.addEventListener('click', () => {
+        addProgressItem(text);
+        // trigger delete button click
+        deleteBtn.click();
+
+        // task 5:
+        // add item to progressArr
+        progressArr.push(text);
+        // save progressArr to local storage with a key 'progress'
+        localStorage.setItem('progress', JSON.stringify(progressArr));
+        
+
+    })
+
+
     // create a div to hold the buttons
     const buttonsHolder = document.createElement('div');
     buttonsHolder.append(moveToProgressListBtn);
@@ -98,6 +134,40 @@ function addTodoItem(text) {
     todoList.append(li);
 }
 
+function addProgressItem (text) {
+    // task 3: 
+    // add the text parameter as an li element and append it inside progressList
+    const li = document.createElement('li');
+    const span = document.createElement('span');
+    span.textContent = text;
+
+    // task7: 
+    // create buttons holder div to add the buttons inside it and append it to the li element
+    // create a button with arrow left icon and add it to the buttons holder element
+    // create a button with arrow right icon and add it to the buttons holder element
+    // create a delete button and add it to the buttons holder element
+    const buttonsHolder = document.createElement('div');
+
+    const moveToDoListBtn = document.createElement('button');
+    moveToDoListBtn.innerHTML = '<i class="fas fa-arrow-alt-circle-left"></i>';
+    
+    const moveToDoneListBtn = document.createElement('button');
+    moveToDoneListBtn.innerHTML = '<i class="fas fa-arrow-alt-circle-right"></i>';
+
+    const deleteBtn = document.createElement('button');
+    deleteBtn.innerHTML = '<i class="far fa-trash-alt"></i>';
+
+    buttonsHolder.append(moveToDoListBtn, moveToDoneListBtn, deleteBtn);
+
+    
+    li.append(span, buttonsHolder);
+    progressList.append(li);
+
+
+
+}
+
+// addProgressItem('test');
 
 // learn today
 // 1- localStorage.setItem('key', 'value') save to localStorage
