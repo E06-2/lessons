@@ -230,6 +230,14 @@ function addDoneItem(text) {
 
     li.append(span);
     doneList.append(li);
+
+    // task 12 homework:
+    // create buttons holder div to add the buttons inside it and append it to the li element
+    // create a button with arrow left icon and add it to the li element moveProgressListBtn
+    // add click event listener to moveProgressListBtn to make item move the item  
+    // back to  progressList
+    // create delete button and add it inside the li
+    // add click event listener to delete button to remove item from doneList
 }
 // addProgressItem('test');
 
