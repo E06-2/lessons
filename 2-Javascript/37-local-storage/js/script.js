@@ -83,9 +83,18 @@ function addTodoItem(text) {
         // update todoArr to local storage
         localStorage.setItem('todos', JSON.stringify(todoArr));
     })
+    // Task 2:
+    // create move to progress list button and add it to the li element
+    const moveToProgressListBtn = document.createElement('button');
+    moveToProgressListBtn.innerHTML = '<i class="fas fa-arrow-alt-circle-right"></i>';
 
+    // create a div to hold the buttons
+    const buttonsHolder = document.createElement('div');
+    buttonsHolder.append(moveToProgressListBtn);
+    buttonsHolder.append(deleteBtn);
+    
     li.append(span);
-    li.append(deleteBtn);
+    li.append(buttonsHolder);
     todoList.append(li);
 }
 
