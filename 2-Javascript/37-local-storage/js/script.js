@@ -4,6 +4,12 @@ const todoList = document.querySelectorAll('.lists-container > div > ul')[0];
 const progressList = document.querySelectorAll('.lists-container > div > ul')[1];
 const doneList = document.querySelectorAll('.lists-container > div > ul')[2];
 
+// public variables
+let todoArr = [];
+let progressArr = [];
+let doneArr =[];
+
+
 //access local storage
 // const localStorage = window.localStorage;
 // ex. save value to local storage
@@ -23,7 +29,7 @@ const doneList = document.querySelectorAll('.lists-container > div > ul')[2];
 // add event listener to add button to add todo item to todo list
 // create "li" element and add it to the todoList with textContent value from todoInp
 const localStorage = window.localStorage;
-let todoArr = [];
+
 // Fill the todoArr with values from localStorage IF EXISTS
 const localStorageTodos = localStorage.getItem('todos')
 if (localStorageTodos) {
@@ -66,7 +72,7 @@ todoInp.addEventListener('keyup', (e) => {
     }
 })
 
-let progressArr = [];
+
 
 // task 6: 
 // read local storage and try to get the value of [progress] key
@@ -134,6 +140,26 @@ function addTodoItem(text) {
     todoList.append(li);
 }
 
+
+
+// task 11: 
+// read local storage and try to get the value of [done] key
+// if exists, add the values to doneArr
+// create a function to render elements from doneArr to doneList
+const localStorageDone = localStorage.getItem('done');
+if (localStorageDone) {
+    doneArr = JSON.parse(localStorageDone);
+    renderDoneList();
+}
+
+function renderDoneList() {
+    doneList.innerHTML = '';
+    doneArr.forEach(item => {
+        addDoneItem(item);
+    })
+}
+
+
 function addProgressItem (text) {
     // task 3: 
     // add the text parameter as an li element and append it inside progressList
@@ -163,10 +189,48 @@ function addProgressItem (text) {
     li.append(span, buttonsHolder);
     progressList.append(li);
 
+    // task8: 
+    // add click event listener to moveToDoneListBtn to make item move back to todoList
+    moveToDoListBtn.addEventListener('click', () => {
+        todoArr.push(text);
+        localStorage.setItem('todos', JSON.stringify(todoArr));
+        addTodoItem(text);
+        deleteBtn.click();
+    })
+
+    // task 9: 
+    // create addDoneItem function to add text in li element and li 
+    // should be appended in doneList
+    // add click event listener to moveToDoneListBtn to make item move to doneList
+    moveToDoneListBtn.addEventListener('click', () => {
+        addDoneItem(text);
+        deleteBtn.click();
+        doneArr.push(text);
+        localStorage.setItem('done', JSON.stringify(doneArr));
+    })
+
+    // task 10:
+    // add click event listener to delete button to: 
+    // remove item from progressList
+    // remove the item from the progressArr
+    // update local storage progress
+    deleteBtn.addEventListener('click', () => {
+        li.remove();
+        progressArr = progressArr.filter(item => item !== text);
+        localStorage.setItem('progress', JSON.stringify(progressArr));
+    })
 
 
 }
 
+function addDoneItem(text) {
+    const li = document.createElement('li');
+    const span = document.createElement('span');
+    span.textContent = text;
+
+    li.append(span);
+    doneList.append(li);
+}
 // addProgressItem('test');
 
 // learn today
