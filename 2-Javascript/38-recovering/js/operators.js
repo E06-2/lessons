@@ -68,3 +68,42 @@ console.log(b)
 let b1 = 5 // 0101
 b1 = b1 << 1 // 1010 (multiple by 2)
 console.log(b1)
+console.clear();
+/////////////////////////////////
+// Logic Operators
+// 1- equal (==) or (===)
+let number1 = 5
+let number2 = "5"
+console.log(number1 == number2)// (==) to compare the value if equal, (Not works with objects, arrays, NaN)
+let ar1 = [1,2,3]
+let ar2 = [1,2,3]
+console.log(ar1 == ar2)
+let bo1 = false
+let bo2 = "false"
+console.log(bo1 == bo2)
+console.log(undefined == undefined)
+console.log(null == null)
+console.log(NaN == NaN)
+console.log(Infinity == Infinity)
+console.clear()
+console.log(number1 === number2)
+console.log(number1 == number2)
+console.log(bo1 == bo2)
+let bool = 5 == 5
+console.log(typeof bool, bool)
+// 2- more/less >(<)
+console.log(4>=4)
+// 3- AND OR &&, ||
+// true AND true ==> True, other cases false
+// false OR false ==> False, other cases is true
+
+
+
+
+
+
+
+
+
+
+
