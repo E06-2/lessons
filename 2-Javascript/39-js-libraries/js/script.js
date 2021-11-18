@@ -27,7 +27,22 @@ const tbody = document.querySelector('.table > tbody');
         //console.log(rows);
         tbody.innerHTML = rows.join('');
         // call data table library to render the table
-        const dataTable = new DataTable(table);
+        const dataTable = new DataTable(table, {
+            // options to customize the table
+            labels:{
+                placeholder: 'find...'
+            },
+            perPageSelect: [30, 50, 100, 150, 200]
+        });
+        console.log(dataTable);
+
+        // add event listener to each row
+        const htmlRows = document.querySelectorAll('.table > tbody > tr');
+        htmlRows.forEach(row => {
+            row.addEventListener('click', e => {
+                alert(row.children[0].textContent)
+            })
+        });
     } catch (error) {
         console.log(error);
     }
