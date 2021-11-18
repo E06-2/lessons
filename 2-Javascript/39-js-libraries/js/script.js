@@ -5,6 +5,7 @@
 //     console.log('IIFE');
 //     let bla;
 // })()
+const table = document.querySelector('.table');
 const tbody = document.querySelector('.table > tbody');
 (async () => {
     try {
@@ -21,10 +22,12 @@ const tbody = document.querySelector('.table > tbody');
                 <td>${country.incomeLevel.value}</td>
                 <td>${country.capitalCity}</td>
             </tr>
-            `
+            `;
         });
         //console.log(rows);
         tbody.innerHTML = rows.join('');
+        // call data table library to render the table
+        const dataTable = new DataTable(table);
     } catch (error) {
         console.log(error);
     }
