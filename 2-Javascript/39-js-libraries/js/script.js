@@ -30,7 +30,8 @@ const tbody = document.querySelector('.table > tbody');
         const dataTable = new DataTable(table, {
             // options to customize the table
             labels:{
-                placeholder: 'find...'
+                placeholder: 'find...',
+                info: 'Zeige {start} bis {end} von {rows} Einträgen'
             },
             perPageSelect: [30, 50, 100, 150, 200]
         });
