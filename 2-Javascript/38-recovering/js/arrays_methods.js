@@ -58,10 +58,11 @@ console.log(arr1)
 console.clear()
 // .filter
 let arr2 = arr.filter(i => i<5)
-console.log(arr2)
-console.log(arr1)
+console.log(arr2)// filter
+console.log(arr1)// map
 /**
- * display all students more than 23 years old
+ * 1- display all students more than 23 years old
+ * 2- generate a new array of students, with real age after 3 years later
  */
 let students = [{
     name: "student1",
@@ -83,7 +84,34 @@ let students = [{
     age: 34
 }]
 
+let studentsMore23 = students.filter(student=> student.age>23)
+console.log(studentsMore23)
+// let studentsAfter3Years = students.filter(student=>student.age+=3)
+let studentsAfter3Years = students.map(student=> {return {...student, age:student.age+3, happy: true}})
+console.log(studentsAfter3Years)
 
+// Destrucuring
+console.clear()
+let arrr = [ 4,6,9,10]
+// let [a, b, c, d] = arrr
+// console.log(a, b, c, d)
+// let [a, b] = arrr
+// console.log(a,b)// a = 4, b = 6 
+// let [a, ...b] = arrr
+// console.log(a, b)// a = 4, b = [6,9,10]
+// let [a, , , b] = arrr
+// console.log(a, b)// a = 4, b = 10
+let [,a, ...b]= arrr
+console.log(a, b)
+console.clear()
+let x = 4
+// if(x >= 5){
+//     console.log("More than five")
+// }else{
+//     console.log("less than five")
+// }
+// condition?code to be executed when condition is true : code to be executed when condition is false
+x>=5?console.log("More than five"): console.log("less than five")
 
 
 
