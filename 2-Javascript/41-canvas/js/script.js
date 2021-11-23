@@ -72,3 +72,66 @@ grayScaleBtn.addEventListener('click', () => {
     // draw the image data on the canvas
     ctx.putImageData(imageData, 0, 0);
 })
+
+
+
+
+
+// get the invert button from DOM
+const invertBtn = document.getElementById('invertBtn');
+// add event listener to button
+invertBtn.addEventListener('click', () => {
+    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    console.log(imageData.data[0]); // red channel value for pixel at (0, 0)
+    console.log(imageData.data[1]); // green channel value for pixel at (0, 0)
+    console.log(imageData.data[2]); // blue channel value for pixel at (0, 0)
+    for (let i = 0; i <imageData.data.length; i += 4 ) {
+        // console.log(imageData.data[i]);
+        // console.log(imageData.data[i + 1]); 
+        // console.log(imageData.data[i + 2]);
+        
+        imageData.data[i] = 255 - imageData.data[i];
+        imageData.data[i + 1] = 255 - imageData.data[i + 1];
+        imageData.data[i + 2] = 255 - imageData.data[i + 2];
+    }
+    // clear the canvas
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    // draw the image data on the canvas
+    ctx.putImageData(imageData, 0, 0);
+})
+
+
+
+// get the rmBlueBtn button from DOM
+const rmBlueBtn = document.getElementById('rmBlueBtn');
+// add event listener to button
+rmBlueBtn.addEventListener('click', () => {
+    const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    console.log(imageData.data[0]); // red channel value for pixel at (0, 0)
+    console.log(imageData.data[1]); // green channel value for pixel at (0, 0)
+    console.log(imageData.data[2]); // blue channel value for pixel at (0, 0)
+    const FACTOR = 10;
+    for (let i = 0; i <imageData.data.length; i += 4 ) {
+        // console.log(imageData.data[i]);
+        // console.log(imageData.data[i + 1]); 
+        // console.log(imageData.data[i + 2]);
+        const r = imageData.data[i]
+        const g = imageData.data[i + 1]
+        const b = imageData.data[i + 2]
+        if (b - r > FACTOR && b - g > FACTOR) {
+            const averageColor = (
+                imageData.data[i] + 
+                imageData.data[i + 1] + 
+                imageData.data[i + 2]
+                ) / 3;
+            imageData.data[i] = averageColor;
+            imageData.data[i + 1] = averageColor;
+            imageData.data[i + 2] = averageColor;
+        }
+        
+    }
+    // clear the canvas
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    // draw the image data on the canvas
+    ctx.putImageData(imageData, 0, 0);
+})
